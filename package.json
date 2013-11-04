@@ -1,0 +1,30 @@
+{
+  "name": "tpct",
+  "version": "0.0.0",
+  "description": "Preprocessor based on rework",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/topcoat/tpct.git"
+  },
+  "author": "@dam",
+  "license": "Apache2",
+  "bugs": {
+    "url": "https://github.com/topcoat/tpct/issues"
+  },
+  "devDependencies": {
+    "grunt-simple-mocha": "~0.4.0",
+    "rework-vars": "~1.0.1",
+    "rework-import": "0.0.3",
+    "topcoat-utils": "git://github.com/topcoat/utils.git#rework",
+    "topcoat-button": "git://github.com/topcoat/button.git#rework",
+    "topcoat-button-base": "git://github.com/topcoat/button-base.git#rework",
+    "topcoat-theme": "git://github.com/topcoat/theme.git#rework"
+  },
+  "dependencies": {
+    "rework": "~0.18.3"
+  }
+}
