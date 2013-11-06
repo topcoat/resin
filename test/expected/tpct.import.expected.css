@@ -1,0 +1,621 @@
+:root {
+  /* Call To Action */
+  var-color--cta: #fff;
+  var-background-color--cta: #288edf;
+  var-notification-color: #ec514e;
+  var-background-color-light--cta: lighten(#288edf, 42.5);
+  var-border-color--cta: darken(#288edf, 23);
+  var-border--cta: 1px solid darken(#288edf, 23);
+  var-background-color--cta--down: darken(#288edf, 6.5);
+  var-background-color--cta--hover: lighten(#288edf, 8);
+  var-box-shadow--cta: inset 0 1px rgba(255, 255, 255, 0.36);
+  var-box-shadow--cta--down: inset 0 1px rgba(invert(#fff), 0.12);
+  var-font-weight--cta: 500;
+  var-text-shadow--cta: 0 -1px rgba(invert(#fff), 0.36);
+  var-overflow: hidden;
+  var-border--focus: 1px solid #0036FF;
+  var-box-shadow--focus: 0 0 0 2px #6fb5f1;
+  var-border--invalid: 1px solid #fff;
+  /* Text Input */
+  var-placeholder-color--input: #c6c8c8;
+  var-color--focus: #000;
+  /* Radio input */
+  var-radio-offset: -109px;
+  var-radio-offset--checked: -74px;
+  var-radio-width: 37px;
+  var-radio-bgsize: 37px;
+  var-radio-height: 31px;
+  var-radio-line-height: 31px;
+  var-radio-margin: 15px;
+  /* Overlay */
+  var-overlay-bg-color: rgba(88, 90, 92, 0.7);
+  var-overlay-padding: 20px 10px;
+  var-overlay-bg-box-shadow: inset 0px 0px 115px 0px #000000;
+  var-overlay-width: 50%;
+  var-overlay-margin--left: - 50% / 2;
+  /* Textarea */
+  var-font-size--textarea--large: 1.3rem;
+  var-line-height--large: 1.3rem;
+  var-margin: 0;
+  /* Progress bar container */
+  var-bar-border-radius: 12px;
+  var-bar-width: 250px;
+  var-bar-height: 1.25rem;
+  /* Progress bar progress */
+  var-progress-border-radius: 12px 0 0 12px;
+  /* Switch */
+  var-content--switch__label--left: 'ON';
+  var-content--switch__label--right: 'OFF';
+  var-margin-bottom--switch__toggle: -1px;
+  var-margin-top--switch__toggle: -1px;
+  var-transition--switch__toggle: margin-left 0.05s ease-in-out;
+  var-margin-bottom--switch__toggle: -1px;
+  var-margin-top--switch__toggle: -1px;
+  /* Notification */
+  var-notification-padding: 0.15em 0.5em 0.2em;
+  var-notification-margin: 5px;
+  var-notification-border-radius: 2px;
+  var-notification-bg-color: #fff;
+  var-notification-color: #fff;
+  /* Search */
+  var-search-icon: url("../img/search.svg");
+}
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+:root {
+  var-font-size: 16px;
+  var-font-size--large: 1.3rem;
+  var-font-weight: 400;
+  var-font-weight--large: 400;
+  var-letter-spacing: 1px;
+  var-border-radius: 6px;
+  var-border-radius--large: 30px;
+  var-border-radius--huge: 40px;
+  var-padding: 0 1.25rem;
+  var-padding--large: 0 1.25rem;
+  var-height: 3rem;
+  var-height--large: 4.375rem;
+  var-line-height: 3rem;
+  var-line-height--large: 4.375rem;
+  var-vertical-align: top;
+  /* Containers */
+  var-padding--container: 2rem;
+  /* Icon Button */
+  var-size--icon: 3rem * 0.54;
+  var-size--icon--large: 4.375rem * 0.571428571;
+  var-padding--icon-button: 0 3rem / 4;
+  var-icon-top: -1px;
+  var-icon-top--large: -2px;
+  /* Navigation bar */
+  var-padding--navigation-bar: 1rem;
+  /* List */
+  var-padding--list-header: 4px 20px;
+  var-padding--list-item: 1.25rem;
+  var-font-size--list-header: .9em;
+  var-font-weight--list-header: 400;
+  /* Search Input */
+  var-search-icon: url("../img/search.svg");
+  var-background-image--search-input: url("../img/search.svg");
+  /* Text Area */
+  var-font-size--textarea: 2.5rem;
+  var-font-size--textarea--large: 3rem;
+  /* Checkbox */
+  var-size--checkbox: 2rem;
+  var-border-radius--checkbox: 3px;
+  var-top--checkmark: 1px;
+  var-left--checkmark: 2px;
+  var-width--checkmark__tail: 28px;
+  var-height--checkmark__foot: 11px;
+  var-border-radius--checkmark: 2px;
+  var-border-width--checkmark: 7px;
+  var-transform--checkmark: rotate(-50deg);
+  /* Radio */
+  var-size--radio-button: 1.875rem;
+  var-size--radio-button--checked: 0.875rem;
+  var-position--radio-button--checked: 7px;
+  /* Range input */
+  var-width--range__thumb: 2rem;
+  var-height--range__track: 1rem;
+  /* Search Input */
+  var-padding--search-input: 0 0 0 2rem;
+  var-padding--search-input--large: 0 0 0 2.9rem;
+  /* Switch */
+  var-width--switch: 6rem;
+  var-width--switch__label: 5rem;
+  var-right--switch__label--left: 1rem;
+  var-padding-left--switch__label--left: 1.5rem;
+  var-width--switch__toggle: 2rem;
+  var-margin-left--switch__toggle: -1.3rem;
+  var-left--switch__label--right: 1rem;
+  var-padding-left--switch__label--right: 2rem;
+  var-margin-left--switch__toggle--checked: 2.7rem;
+}
+
+:root {
+  /* ---------- colors ---------- */
+  var-color: #c6c8c8;
+  var-background-color: #595b5b;
+  var-background--body: #4B4D4E;
+  var-highlight-color: #fff;
+  var-shadow-color: #000;
+  /* ---------- darken ---------- */
+  var-dark: 5;
+  var-darker: 8;
+  var-darkest: 15;
+  /* ---------- lighten ---------- */
+  var-light: 3;
+  var-lighter: 9;
+  var-lightest: 24;
+  /* ---------- alphas ---------- */
+  var-alpha--high: 0.1;
+  var-alpha--med: 0.23;
+  var-alpha--low: 0.05;
+  /* ---------- thickness ---------- */
+  var-border-thickness: 1px;
+  /* ---------- shadows ---------- */
+  var-box-shadow--highlight: 0 -1px rgba( 0, 0, 0, 0.69 );
+  var-background-color--down: darken(#4B4D4E, 5);
+  var-background-color--hover: lighten(#4B4D4E, 9);
+  var-border: 1px solid darken(#595b5b, 15);
+  var-box-shadow: inset 0 1px darken(#fff, 55);
+  var-box-shadow--down: inset 0 1px rgba(0, 0, 0, 0.05);
+  var-text-shadow: 0 -1px rgba( 0, 0, 0, 0.69 );
+  var-background-color--input: darken(#595b5b, 8);
+  var-border-color: darken(#595b5b, 15);
+  /* Icons */
+  var-menu-stack-icon: url("../img/hamburger_light.svg");
+  /* Navigation Bar */
+  var-color--navigation-bar: #fff;
+  var-box-shadow--navigation-bar: inset 0 -1px darken(#595b5b, 15), 0 1px darken(#595b5b, 8);
+  /* Text Input */
+  var-color--placeholder: lighten(#c6c8c8, 24);
+  var-color--focus: #fff;
+  var-background-color--text-input: darken(#595b5b, 8);
+  var-background-color--text-input--focus: #595b5b;
+  var-box-shadow--text-input: inset 0 1px 0 rgba(0, 0, 0, 0.23);
+  /* List */
+  var-background-color--list: darken(#595b5b, 8);
+  var-border-top--list-container: 1px solid darken(#595b5b, 15);
+  var-border-top--list: 1px solid darken(#595b5b, 15);
+  var-border-bottom--list: 1px solid lighten(#595b5b, 3);
+  var-border-top--list-item--first: 1px solid rgba(0, 0, 0, 0.05);
+  var-border-top--list-item: 1px solid lighten(#595b5b, 3);
+  var-border-bottom--list-item: 1px solid darken(#595b5b, 15);
+  var-color--list-header: #c6c8c8;
+  var-text-shadow--list-header: 0 1px 0 rgba(255, 255, 255, 0.1);
+  var-border-top--list-header: 1px solid rgba(255, 255, 255, 0.1);
+  var-border-bottom--list-header: 1px solid rgba(255, 255, 255, 0.05);
+  var-background-color--list-header: darken(#4B4D4E, 5);
+  /* Overlay */
+  var-modal-bg-color: #595b5b;
+  var-overlay__header-border: 1px solid darken(#595b5b, 15);
+  /* Progress bar */
+  var-bar-bg-color: darken(#4B4D4E, 5);
+  var-progress-bg-color: #595b5b;
+  /* Checkbox */
+  var-border--checkmark: 7px solid #c6c8c8;
+  /* Range input */
+  var-range-background: darken(#4B4D4E, 5);
+  var-range__slider-border: 1px solid darken(#595b5b, 15);
+  var-range__slider-background: #595b5b;
+  var-range__slider-bg-size: 7px 18px;
+  var-range__slider-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05);
+  /* Radio Button */
+  var-border--radio-button: 1px solid rgba(0, 0, 0, 0.05);
+  var-background--radio-button: #c6c8c8;
+  var-box-shadow--radio-button: 0 1px rgba(255, 255, 255, 0.1);
+  /* Tab bar */
+  var-color--tab-bar--active: #288edf;
+  var-background-color--tab-bar--active: darken(#4B4D4E, 5);
+  var-box-shadow--tab-bar--active: inset 0 0 1px rgba(0, 0, 0, 0.05);
+  /* Switch */
+  var-color--switch__label--left: #288edf;
+  var-background-color--switch__label--left: darken(#4B4D4E, 5);
+  var-background-color--switch__label--right: darken(#4B4D4E, 5);
+}
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+.topcoat-button--quiet,
+.topcoat-button--large--quiet {
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  cursor: default;
+  user-select: none;
+}
+
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  text-overflow: ellipsis;
+}
+
+.topcoat-button:disabled,
+.topcoat-button--quiet:disabled,
+.topcoat-button--quiet:disabled,
+.topcoat-button--large:disabled,
+.topcoat-button--large:disabled,
+.topcoat-button--large--quiet:disabled,
+.topcoat-button--large--quiet:disabled,
+.topcoat-button--large--quiet:disabled,
+.topcoat-button--cta:disabled,
+.topcoat-button--cta:disabled,
+.topcoat-button--large--cta:disabled,
+.topcoat-button--large--cta:disabled,
+.topcoat-button--large--cta:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  text-decoration: none;
+}
+
+/* topdoc
+  name: Button
+  description: A simple button
+  modifiers:
+    :active: Active state
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button class="topcoat-button">Button</button>
+    <button class="topcoat-button" disabled>Button</button>
+  examples:
+    mobile button: http://codepen.io/Topcoat/pen/DpKtf
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+*/
+
+.topcoat-button,
+.topcoat-button--quiet,
+.topcoat-button--large,
+.topcoat-button--large--quiet,
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  padding: 0 1.25rem;
+  font-size: 16px;
+  line-height: 3rem;
+  letter-spacing: 1px;
+  color: #c6c8c8;
+  text-shadow: 0 -1px rgba( 0, 0, 0, 0.69 );
+  vertical-align: top;
+  background-color: #595b5b;
+  box-shadow: inset 0 1px darken(#fff, 55);
+  border: 1px solid darken(#595b5b, 15);
+  border-radius: 6px;
+}
+
+.topcoat-button:hover,
+.topcoat-button--quiet:hover,
+.topcoat-button--quiet:hover,
+.topcoat-button--large:hover,
+.topcoat-button--large:hover,
+.topcoat-button--large--quiet:hover,
+.topcoat-button--large--quiet:hover,
+.topcoat-button--large--quiet:hover,
+.topcoat-button--large--quiet:hover,
+.topcoat-button--cta:hover,
+.topcoat-button--large--cta:hover,
+.topcoat-button--large--cta:hover {
+  background-color: lighten(#4B4D4E, 9);
+}
+
+.topcoat-button:active,
+.topcoat-button--quiet:active,
+.topcoat-button--large:active,
+.topcoat-button--large:active,
+.topcoat-button--large--quiet:active,
+.topcoat-button--large--quiet:active,
+.topcoat-button--large--quiet:active,
+.topcoat-button--cta:active,
+.topcoat-button--large--cta:active,
+.topcoat-button--large--cta:active {
+  background-color: darken(#4B4D4E, 5);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.topcoat-button:focus,
+.topcoat-button--quiet:focus,
+.topcoat-button--quiet:focus,
+.topcoat-button--large:focus,
+.topcoat-button--large:focus,
+.topcoat-button--large--quiet:focus,
+.topcoat-button--large--quiet:focus,
+.topcoat-button--large--quiet:focus,
+.topcoat-button--cta:focus,
+.topcoat-button--cta:focus,
+.topcoat-button--large--cta:focus,
+.topcoat-button--large--cta:focus,
+.topcoat-button--large--cta:focus {
+  border: 1px solid #0036FF;
+  box-shadow: 0 0 0 2px #6fb5f1;
+  outline: 0;
+}
+
+/* topdoc
+  name: Quiet Button
+  description: A simple, yet quiet button
+  modifiers:
+    :active: Quiet button active state
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button class="topcoat-button--quiet">Button</button>
+    <button class="topcoat-button--quiet" disabled>Button</button>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+    - quiet
+*/
+
+.topcoat-button--quiet:hover,
+.topcoat-button--large--quiet:hover {
+  text-shadow: 0 -1px rgba( 0, 0, 0, 0.69 );
+  border: 1px solid darken(#595b5b, 15);
+  box-shadow: inset 0 1px darken(#fff, 55);
+}
+
+.topcoat-button--quiet:active,
+.topcoat-button--large--quiet:active {
+  color: #c6c8c8;
+  text-shadow: 0 -1px rgba( 0, 0, 0, 0.69 );
+  background-color: darken(#4B4D4E, 5);
+  border: 1px solid darken(#595b5b, 15);
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* topdoc
+  name: Large Button
+  description: A big ol button
+  modifiers:
+    :active: Active state
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button class="topcoat-button--large" >Button</button>
+    <button class="topcoat-button--large" disabled>Button</button>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+    - large
+*/
+
+.topcoat-button--large,
+.topcoat-button--large--quiet {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 4.375rem;
+  padding: 0 1.25rem;
+}
+
+/* topdoc
+  name: Large Quiet Button
+  description: A large, yet quiet button
+  modifiers:
+    :active: Active state
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button class="topcoat-button--large--quiet" >Button</button>
+    <button class="topcoat-button--large--quiet" disabled>Button</button>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+    - large
+    - quiet
+*/
+
+/* topdoc
+  name: Call To Action Button
+  description: A CALL TO ARMS, er, ACTION!
+  modifiers:
+    :active: Active state
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button class="topcoat-button--cta" >Button</button>
+    <button class="topcoat-button--cta" disabled>Button</button>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+    - call to action
+*/
+
+.topcoat-button--cta,
+.topcoat-button--large--cta {
+  border: 1px solid darken(#288edf, 23);
+  background-color: #288edf;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.36);
+  color: #fff;
+  font-weight: 500;
+  text-shadow: 0 -1px rgba(invert(#fff), 0.36);
+}
+
+.topcoat-button--cta:hover,
+.topcoat-button--large--cta:hover,
+.topcoat-button--large--cta:hover {
+  background-color: lighten(#288edf, 8);
+}
+
+.topcoat-button--cta:active,
+.topcoat-button--large--cta:active,
+.topcoat-button--large--cta:active {
+  background-color: var-background-color--cta--down;
+  box-shadow: var-box-shadow--cta--down;
+}
+
+/* topdoc
+  name: Large Call To Action Button
+  description: Like call to action, but bigger
+  modifiers:
+    :active: Active state
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button class="topcoat-button--large--cta" >Button</button>
+    <button class="topcoat-button--large--cta" disabled>Button</button>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+    - large
+    - call to action
+*/
+
+.topcoat-button--large--cta {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 4.375rem;
+  padding: 0 1.25rem;
+}

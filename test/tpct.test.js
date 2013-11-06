@@ -9,8 +9,8 @@ describe('tpct', function() {
             dest: 'tmp/tpct.css'
         });
 
-        var actual = read('tmp/tpct.css'),
-            expected = read('test/expected/tpct.expected.css', 'utf-8');
+        var actual = read('tmp/tpct.css').toString().trim(),
+            expected = read('test/expected/tpct.expected.css', 'utf-8').toString().trim();
         assert.equal(actual, expected, 'Generated output should match expected file');
     });
 
@@ -29,8 +29,8 @@ describe('tpct', function() {
             dest: 'tmp/tpct.import.css'
         });
 
-        var actual = read('tmp/tpct.import.css'),
-            expected = read('test/expected/tpct.import.expected.css', 'utf-8');
+        var actual = read('tmp/tpct.import.css').toString().trim(),
+            expected = read('test/expected/tpct.import.expected.css', 'utf-8').toString().trim();
         assert.equal(actual, expected, 'Generated output should match expected file');
     });
 });
