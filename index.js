@@ -1,24 +1,28 @@
-
 var rework = require('rework'),
-    imprt  = require('rework-npm'),
-    vars   = require('rework-vars'),
-    read   = require('fs').readFileSync;
+    imprt = require('rework-npm'),
+    vars = require('rework-vars'),
+    autoprefixer = require('autoprefixer'),
+    read = require('fs-extra').readFileSync,
+    write = require('fs-extra').writeFileSync;
 
 module.exports = function(options) {
-    options  = options || {};
-    var file = options.file,
-        css;
+    options = options || {};
+    var src = options.src,
+        dest = options.dest,
+        browsers = options.browsers || [],
+        output;
 
-    if(!file) {
-      throw new Error('You must supply a file to process.');
+    if (!src) {
+        throw new Error("Sorry, I couldn't find an input file. Did you supply one?");
     }
 
-    css  = rework(read(file, 'utf8'))
-              .use(imprt())
-              .use(vars())
-              .use(rework.colors())
-              .use(rework.extend())
-              .toString();
+    output = rework(read(src, 'utf8'))
+        .use(imprt())
+        .use(vars())
+        .use(rework.colors())
+        .use(rework.extend())
+        .use(autoprefixer(browsers).rework)
+        .toString();
 
-console.log(css);
+    write(dest, output);
 };

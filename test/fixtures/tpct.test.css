@@ -1,0 +1,17 @@
+:root {
+    var-blue: #0cc;
+    var-grey: #666;
+    var-light-grey: rgba(var(grey), 0.5);
+}
+
+%button {
+    border: 1px solid var(blue);
+    background: var(light-grey);
+}
+
+.button--large {
+    extend: %button;
+    width: 6rem;
+    height: 3rem;
+    box-shadow: 0 1px var(grey);
+}

@@ -23,6 +23,9 @@
     "rework-vars": "~1.0.1",
     "rework-npm": "0.0.2",
     "topcoat-theme-mobile-dark": "git://github.com/topcoat/theme-mobile-dark.git",
-    "topcoat-button": "git://github.com/topcoat/button.git#rework"
+    "topcoat-button": "git://github.com/topcoat/button.git#rework",
+    "autoprefixer": "~0.8.20131104",
+    "node-fs": "~0.1.7",
+    "fs-extra": "~0.8.1"
   }
 }
