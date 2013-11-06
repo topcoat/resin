@@ -16,14 +16,14 @@
     "url": "https://github.com/topcoat/tpct/issues"
   },
   "devDependencies": {
+    "topcoat-theme-mobile-dark": "git://github.com/topcoat/theme-mobile-dark.git",
+    "topcoat-button": "git://github.com/topcoat/button.git#rework",
     "grunt-simple-mocha": "~0.4.0"
   },
   "dependencies": {
     "rework": "~0.18.3",
     "rework-vars": "~1.0.1",
     "rework-npm": "0.0.2",
-    "topcoat-theme-mobile-dark": "git://github.com/topcoat/theme-mobile-dark.git",
-    "topcoat-button": "git://github.com/topcoat/button.git#rework",
     "autoprefixer": "~0.8.20131104",
     "node-fs": "~0.1.7",
     "fs-extra": "~0.8.1"
