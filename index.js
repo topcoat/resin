@@ -2,10 +2,18 @@
 var rework = require('rework'),
     imprt  = require('rework-npm'),
     vars   = require('rework-vars'),
-    read   = require('fs').readFileSync,
-    css;
+    read   = require('fs').readFileSync;
 
-    css    = rework(read('./entry.css', 'utf8'))
+module.exports = function(options) {
+    options  = options || {};
+    var file = options.file,
+        css;
+
+    if(!file) {
+      throw new Error('You must supply a file to process.');
+    }
+
+    css  = rework(read(file, 'utf8'))
               .use(imprt())
               .use(vars())
               .use(rework.colors())
@@ -13,4 +21,4 @@ var rework = require('rework'),
               .toString();
 
 console.log(css);
-
+};
