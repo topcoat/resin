@@ -1,10 +1,14 @@
 
 var rework = require('rework'),
-    imprt  = require('rework-import'),
+    imprt  = require('rework-npm'),
     vars   = require('rework-vars'),
     read   = require('fs').readFileSync,
-    css    = rework(read('node_modules/topcoat-button/src/topcoat-button.css', 'utf8'))
-              .use(imprt('./node_modules'))
+    css;
+
+    css    = rework(read('./entry.css', 'utf8'))
+              .use(imprt())
+              .use(vars())
+              .use(rework.colors())
               .use(rework.extend())
               .toString();
 
