@@ -589,8 +589,8 @@
 .topcoat-button--cta:active,
 .topcoat-button--large--cta:active,
 .topcoat-button--large--cta:active {
-  background-color: var-background-color--cta--down;
-  box-shadow: var-box-shadow--cta--down;
+  background-color: darken(#288edf, 6.5);
+  box-shadow: inset 0 1px rgba(invert(#fff), 0.12);
 }
 
 /* topdoc
