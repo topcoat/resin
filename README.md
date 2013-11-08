@@ -8,7 +8,8 @@ Installation
 ------------
 
 ```
-    npm install topcoat-resin
+npm install topcoat-resin
+
 ```
 
 Usage
