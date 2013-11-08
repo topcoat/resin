@@ -5,9 +5,9 @@ var tpct = require('..'),
 
 describe('tpct', function() {
 
-    before(function() { 
-        mkdirp.sync('tmp')
-    })
+    before(function() {
+        mkdirp.sync('tmp');
+    });
 
 
     it('should generate correct output', function() {
