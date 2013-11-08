@@ -4,13 +4,15 @@ Resin
 Opinionated CSS preprocessor for Topcoat made with
 [Rework](http://github.com/visionmedia/rework).
 
-## Installation
+Installation
+------------
 
 ```
     npm install topcoat-resin -g
 ```
 
-## Usage
+Usage
+-----
 
 ```js
 
@@ -22,21 +24,23 @@ var resin = require('topcoat-resin');
         // Tell it where to put the processed file
         dest: 'css/output.css',
         // Tell it what browsers to prefix for
-        //      *uses [Autoprefixer](https://github.com/ai/autoprefixer) under the hood.
         browsers: ['last 1 version', 'ios', 'android 4']
     });
 
 ```
-### Entry CSS file
+
+Entry CSS file
+--------------
 
 ```css
 @import "node-package-name";
 @import "other-node-package-name";
 ```
 Resin will pull in CSS source files distributed via npm packages and add them
-to the AST. Used [rework-npm](https://github.com/conradz/rework-npm) under the covers.
+to the AST. Uses [rework-npm](https://github.com/conradz/rework-npm) under the covers.
 
-### Features
+Features
+--------
 
 Resin supports:
 
@@ -46,7 +50,8 @@ Resin supports:
 * [Extend](https://github.com/visionmedia/rework#extend)
 * [Autoprefixer](https://github.com/ai/autoprefixer)
 
-#### TODO:
+TODO
+----
 
 * [Topdoc](https://github.com/topcoat/topdoc)
     * [issue#1](https://github.com/topcoat/resin/issues/1)
