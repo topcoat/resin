@@ -1,19 +1,19 @@
 {
-  "name": "tpct",
+  "name": "resin",
   "version": "0.0.0",
-  "description": "Preprocessor based on rework",
+  "description": "Opinionated CSS Preprocessor for Topcoat based on rework",
   "main": "index.js",
   "scripts": {
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/topcoat/tpct.git"
+    "url": "git://github.com/topcoat/resin.git"
   },
   "author": "@dam",
   "license": "Apache2",
   "bugs": {
-    "url": "https://github.com/topcoat/tpct/issues"
+    "url": "https://github.com/topcoat/resin/issues"
   },
   "devDependencies": {
     "topcoat-theme-mobile-dark": "git://github.com/topcoat/theme-mobile-dark.git",

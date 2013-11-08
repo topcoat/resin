@@ -1,9 +1,9 @@
-var tpct = require('..'),
+var resin = require('..'),
     assert = require('assert'),
     read = require('fs').readFileSync,
     mkdirp = require('mkdirp');
 
-describe('tpct', function() {
+describe('resin', function() {
 
     before(function() {
         mkdirp.sync('tmp');
@@ -11,33 +11,34 @@ describe('tpct', function() {
 
 
     it('should generate correct output', function() {
-        tpct({
-            src: 'test/fixtures/tpct.test.css',
-            dest: 'tmp/tpct.css'
+        resin({
+            src: 'test/fixtures/resin.test.css',
+            dest: 'tmp/resin.css'
         });
 
-        var actual = read('tmp/tpct.css').toString().trim(),
-            expected = read('test/expected/tpct.expected.css', 'utf-8').toString().trim();
+        var actual = read('tmp/resin.css').toString().trim(),
+            expected = read('test/expected/resin.expected.css', 'utf-8').toString().trim();
         assert.equal(actual, expected, 'Generated output should match expected file');
     });
 
     it('should throw error when no input file is supplied', function() {
         assert.throws(function() {
-            tpct({
+            resin({
                 src: '',
-                dest: 'tmp/tpct.css'
+                dest: 'tmp/resin.css'
             });
         }, Error);
     });
 
     it('should import from node_modules', function() {
-        tpct({
-            src: 'test/fixtures/tpct.import.test.css',
-            dest: 'tmp/tpct.import.css'
+        resin({
+            src: 'test/fixtures/resin.import.test.css',
+            dest: 'tmp/resin.import.css'
         });
 
-        var actual = read('tmp/tpct.import.css').toString().trim(),
-            expected = read('test/expected/tpct.import.expected.css', 'utf-8').toString().trim();
+        var actual = read('tmp/resin.import.css').toString().trim(),
+            expected = read('test/expected/resin.import.expected.css', 'utf-8').toString().trim();
+
         assert.equal(actual, expected, 'Generated output should match expected file');
     });
 
