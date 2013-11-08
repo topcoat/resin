@@ -18,7 +18,9 @@
   "devDependencies": {
     "topcoat-theme-mobile-dark": "git://github.com/topcoat/theme-mobile-dark.git",
     "topcoat-button": "git://github.com/topcoat/button.git#rework",
-    "grunt-simple-mocha": "~0.4.0"
+    "grunt-simple-mocha": "~0.4.0",
+    "grunt": "~0.4.1",
+    "mkdirp": "~0.3.5"
   },
   "dependencies": {
     "rework": "~0.18.3",

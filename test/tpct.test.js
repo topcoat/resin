@@ -1,8 +1,15 @@
 var tpct = require('..'),
     assert = require('assert'),
-    read = require('fs').readFileSync;
+    read = require('fs').readFileSync,
+    mkdirp = require('mkdirp');
 
 describe('tpct', function() {
+
+    before(function() { 
+        mkdirp.sync('tmp')
+    })
+
+
     it('should generate correct output', function() {
         tpct({
             src: 'test/fixtures/tpct.test.css',
@@ -33,4 +40,5 @@ describe('tpct', function() {
             expected = read('test/expected/tpct.import.expected.css', 'utf-8').toString().trim();
         assert.equal(actual, expected, 'Generated output should match expected file');
     });
+
 });
