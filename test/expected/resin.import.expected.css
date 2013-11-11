@@ -3,11 +3,11 @@
   var-color--cta: #fff;
   var-background-color--cta: #288edf;
   var-notification-color: #ec514e;
-  var-background-color-light--cta: lighten(#288edf, 42.5);
-  var-border-color--cta: darken(#288edf, 23);
-  var-border--cta: 1px solid darken(#288edf, 23);
-  var-background-color--cta--down: darken(#288edf, 6.5);
-  var-background-color--cta--hover: lighten(#288edf, 8);
+  var-background-color-light--cta: hsla(207, 74%, 100%, 1);
+  var-border-color--cta: hsla(207, 74%, 0%, 1);
+  var-border--cta: 1px solid hsla(207, 74%, 0%, 1);
+  var-background-color--cta--down: hsla(207, 74%, 0%, 1);
+  var-background-color--cta--hover: hsla(207, 74%, 100%, 1);
   var-box-shadow--cta: inset 0 1px rgba(255, 255, 255, 0.36);
   var-box-shadow--cta--down: inset 0 1px rgba(invert(#fff), 0.12);
   var-font-weight--cta: 500;
@@ -171,49 +171,49 @@
   var-border-thickness: 1px;
   /* ---------- shadows ---------- */
   var-box-shadow--highlight: 0 -1px rgba( 0, 0, 0, 0.69 );
-  var-background-color--down: darken(#4B4D4E, 5);
-  var-background-color--hover: lighten(#4B4D4E, 9);
-  var-border: 1px solid darken(#595b5b, 15);
-  var-box-shadow: inset 0 1px darken(#fff, 55);
+  var-background-color--down: hsla(200, 2%, 0%, 1);
+  var-background-color--hover: hsla(200, 2%, 100%, 1);
+  var-border: 1px solid hsla(180, 1%, 0%, 1);
+  var-box-shadow: inset 0 1px hsla(0, 0%, 0%, 1);
   var-box-shadow--down: inset 0 1px rgba(0, 0, 0, 0.05);
   var-text-shadow: 0 -1px rgba( 0, 0, 0, 0.69 );
-  var-background-color--input: darken(#595b5b, 8);
-  var-border-color: darken(#595b5b, 15);
+  var-background-color--input: hsla(180, 1%, 0%, 1);
+  var-border-color: hsla(180, 1%, 0%, 1);
   /* Icons */
   var-menu-stack-icon: url("../img/hamburger_light.svg");
   /* Navigation Bar */
   var-color--navigation-bar: #fff;
-  var-box-shadow--navigation-bar: inset 0 -1px darken(#595b5b, 15), 0 1px darken(#595b5b, 8);
+  var-box-shadow--navigation-bar: inset 0 -1px hsla(180, 1%, 0%, 1), 0 1px hsla(180, 1%, 0%, 1);
   /* Text Input */
-  var-color--placeholder: lighten(#c6c8c8, 24);
+  var-color--placeholder: hsla(180, 2%, 100%, 1);
   var-color--focus: #fff;
-  var-background-color--text-input: darken(#595b5b, 8);
+  var-background-color--text-input: hsla(180, 1%, 0%, 1);
   var-background-color--text-input--focus: #595b5b;
   var-box-shadow--text-input: inset 0 1px 0 rgba(0, 0, 0, 0.23);
   /* List */
-  var-background-color--list: darken(#595b5b, 8);
-  var-border-top--list-container: 1px solid darken(#595b5b, 15);
-  var-border-top--list: 1px solid darken(#595b5b, 15);
-  var-border-bottom--list: 1px solid lighten(#595b5b, 3);
+  var-background-color--list: hsla(180, 1%, 0%, 1);
+  var-border-top--list-container: 1px solid hsla(180, 1%, 0%, 1);
+  var-border-top--list: 1px solid hsla(180, 1%, 0%, 1);
+  var-border-bottom--list: 1px solid hsla(180, 1%, 100%, 1);
   var-border-top--list-item--first: 1px solid rgba(0, 0, 0, 0.05);
-  var-border-top--list-item: 1px solid lighten(#595b5b, 3);
-  var-border-bottom--list-item: 1px solid darken(#595b5b, 15);
+  var-border-top--list-item: 1px solid hsla(180, 1%, 100%, 1);
+  var-border-bottom--list-item: 1px solid hsla(180, 1%, 0%, 1);
   var-color--list-header: #c6c8c8;
   var-text-shadow--list-header: 0 1px 0 rgba(255, 255, 255, 0.1);
   var-border-top--list-header: 1px solid rgba(255, 255, 255, 0.1);
   var-border-bottom--list-header: 1px solid rgba(255, 255, 255, 0.05);
-  var-background-color--list-header: darken(#4B4D4E, 5);
+  var-background-color--list-header: hsla(200, 2%, 0%, 1);
   /* Overlay */
   var-modal-bg-color: #595b5b;
-  var-overlay__header-border: 1px solid darken(#595b5b, 15);
+  var-overlay__header-border: 1px solid hsla(180, 1%, 0%, 1);
   /* Progress bar */
-  var-bar-bg-color: darken(#4B4D4E, 5);
+  var-bar-bg-color: hsla(200, 2%, 0%, 1);
   var-progress-bg-color: #595b5b;
   /* Checkbox */
   var-border--checkmark: 7px solid #c6c8c8;
   /* Range input */
-  var-range-background: darken(#4B4D4E, 5);
-  var-range__slider-border: 1px solid darken(#595b5b, 15);
+  var-range-background: hsla(200, 2%, 0%, 1);
+  var-range__slider-border: 1px solid hsla(180, 1%, 0%, 1);
   var-range__slider-background: #595b5b;
   var-range__slider-bg-size: 7px 18px;
   var-range__slider-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05);
@@ -223,12 +223,12 @@
   var-box-shadow--radio-button: 0 1px rgba(255, 255, 255, 0.1);
   /* Tab bar */
   var-color--tab-bar--active: #288edf;
-  var-background-color--tab-bar--active: darken(#4B4D4E, 5);
+  var-background-color--tab-bar--active: hsla(200, 2%, 0%, 1);
   var-box-shadow--tab-bar--active: inset 0 0 1px rgba(0, 0, 0, 0.05);
   /* Switch */
   var-color--switch__label--left: #288edf;
-  var-background-color--switch__label--left: darken(#4B4D4E, 5);
-  var-background-color--switch__label--right: darken(#4B4D4E, 5);
+  var-background-color--switch__label--left: hsla(200, 2%, 0%, 1);
+  var-background-color--switch__label--right: hsla(200, 2%, 0%, 1);
 }
 
 /**
@@ -417,8 +417,8 @@
   text-shadow: 0 -1px rgba( 0, 0, 0, 0.69 );
   vertical-align: top;
   background-color: #595b5b;
-  box-shadow: inset 0 1px darken(#fff, 55);
-  border: 1px solid darken(#595b5b, 15);
+  box-shadow: inset 0 1px hsla(0, 0%, 0%, 1);
+  border: 1px solid hsla(180, 1%, 0%, 1);
   border-radius: 6px;
 }
 
@@ -434,7 +434,7 @@
 .topcoat-button--cta:hover,
 .topcoat-button--large--cta:hover,
 .topcoat-button--large--cta:hover {
-  background-color: lighten(#4B4D4E, 9);
+  background-color: hsla(200, 2%, 100%, 1);
 }
 
 .topcoat-button:active,
@@ -447,7 +447,7 @@
 .topcoat-button--cta:active,
 .topcoat-button--large--cta:active,
 .topcoat-button--large--cta:active {
-  background-color: darken(#4B4D4E, 5);
+  background-color: hsla(200, 2%, 0%, 1);
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.05);
 }
 
@@ -491,16 +491,16 @@
 .topcoat-button--quiet:hover,
 .topcoat-button--large--quiet:hover {
   text-shadow: 0 -1px rgba( 0, 0, 0, 0.69 );
-  border: 1px solid darken(#595b5b, 15);
-  box-shadow: inset 0 1px darken(#fff, 55);
+  border: 1px solid hsla(180, 1%, 0%, 1);
+  box-shadow: inset 0 1px hsla(0, 0%, 0%, 1);
 }
 
 .topcoat-button--quiet:active,
 .topcoat-button--large--quiet:active {
   color: #c6c8c8;
   text-shadow: 0 -1px rgba( 0, 0, 0, 0.69 );
-  background-color: darken(#4B4D4E, 5);
-  border: 1px solid darken(#595b5b, 15);
+  background-color: hsla(200, 2%, 0%, 1);
+  border: 1px solid hsla(180, 1%, 0%, 1);
   box-shadow: inset 0 1px rgba(0, 0, 0, 0.05);
 }
 
@@ -572,7 +572,7 @@
 
 .topcoat-button--cta,
 .topcoat-button--large--cta {
-  border: 1px solid darken(#288edf, 23);
+  border: 1px solid hsla(207, 74%, 0%, 1);
   background-color: #288edf;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.36);
   color: #fff;
@@ -583,13 +583,13 @@
 .topcoat-button--cta:hover,
 .topcoat-button--large--cta:hover,
 .topcoat-button--large--cta:hover {
-  background-color: lighten(#288edf, 8);
+  background-color: hsla(207, 74%, 100%, 1);
 }
 
 .topcoat-button--cta:active,
 .topcoat-button--large--cta:active,
 .topcoat-button--large--cta:active {
-  background-color: darken(#288edf, 6.5);
+  background-color: hsla(207, 74%, 0%, 1);
   box-shadow: inset 0 1px rgba(invert(#fff), 0.12);
 }
 

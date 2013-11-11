@@ -1,6 +1,7 @@
 var rework = require('rework'),
     imprt = require('rework-npm'),
     vars = require('rework-vars'),
+    color = require('rework-color'),
     autoprefixer = require('autoprefixer'),
     read = require('fs-extra').readFileSync,
     write = require('fs-extra').writeFileSync;
@@ -20,6 +21,7 @@ module.exports = function(options) {
         .use(imprt())
         .use(vars())
         .use(rework.colors())
+        .use(color())
         .use(rework.extend())
         .use(autoprefixer(browsers).rework)
         .toString();
