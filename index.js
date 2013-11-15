@@ -4,7 +4,8 @@ var rework = require('rework'),
     color = require('rework-color'),
     autoprefixer = require('autoprefixer'),
     read = require('fs-extra').readFileSync,
-    write = require('fs-extra').writeFileSync;
+    write = require('fs-extra').writeFileSync,
+    exists = require('fs-extra').existsSync;
 
 module.exports = function(options) {
     options = options || {};
@@ -13,7 +14,7 @@ module.exports = function(options) {
         browsers = options.browsers || [],
         output;
 
-    if (!src) {
+    if (!exists(src)) {
         throw new Error("Sorry, I couldn't find an input file. Did you supply one?");
     }
 
