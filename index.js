@@ -27,5 +27,5 @@ module.exports = function(options) {
         .use(autoprefixer(browsers).rework)
         .toString();
 
-    write(dest, output);
+    return output;
 };
