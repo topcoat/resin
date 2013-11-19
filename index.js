@@ -21,8 +21,8 @@ module.exports = function(options) {
     output = rework(read(src, 'utf8'))
         .use(imprt())
         .use(vars())
-        .use(rework.colors())
         .use(color())
+        .use(rework.colors())
         .use(rework.extend())
         .use(autoprefixer(browsers).rework)
         .toString();

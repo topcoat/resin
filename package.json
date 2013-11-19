@@ -28,6 +28,6 @@
     "autoprefixer": "~0.8.20131104",
     "node-fs": "~0.1.7",
     "fs-extra": "~0.8.1",
-    "rework-color": "~0.1.0"
+    "rework-color": "~0.1.2"
   }
 }
