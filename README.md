@@ -21,7 +21,7 @@ var resin = require('topcoat-resin');
 
     resin({
         // Pass it a css file to process
-        src: 'src/entry.css'
+        src: 'src/entry.css',
         // Tell it what browsers to prefix for
         browsers: ['last 1 version', 'ios', 'android 4']
     });
