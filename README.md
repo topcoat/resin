@@ -34,12 +34,12 @@ Example writing to a file:
 
  ```js
 var resin = require('topcoat-resin'),
-    write = require('fs').readFileSync,
+    write = require('fs').writeFileSync,
     output;
 
     output = resin({
         // Pass it a css file to process
-        src: 'src/entry.css'
+        src: 'src/entry.css',
         // Tell it what browsers to prefix for
         browsers: ['last 1 version', 'ios', 'android 4']
     });
