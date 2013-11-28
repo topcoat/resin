@@ -23,7 +23,9 @@ var resin = require('topcoat-resin');
         // Pass it a css file to process
         src: 'src/entry.css',
         // Tell it what browsers to prefix for
-        browsers: ['last 1 version', 'ios', 'android 4']
+        browsers: ['last 1 version', 'ios', 'android 4'],
+        // Add a namespace to your classes to avoid collisions
+        namespace: 'dam'
     });
 
 ```
@@ -42,6 +44,8 @@ var resin = require('topcoat-resin'),
         src: 'src/entry.css',
         // Tell it what browsers to prefix for
         browsers: ['last 1 version', 'ios', 'android 4']
+        // Add a namespace to your classes to avoid collisions
+        namespace: 'dam'
     });
 
     write('path/to/output/dir/filename.css', output);
@@ -67,6 +71,7 @@ Resin supports:
 * [Variables](https://github.com/visionmedia/rework-vars)
 * [Colors](https://github.com/visionmedia/rework#colors)
 * [Extend](https://github.com/visionmedia/rework#extend)
+* [Namespacing](https://gituhub.com/kristoferjoseph/rework-namespace)
 * [Autoprefixer](https://github.com/ai/autoprefixer)
 
 TODO
