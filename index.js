@@ -2,6 +2,7 @@ var rework = require('rework'),
     imprt = require('rework-npm'),
     vars = require('rework-vars'),
     color = require('rework-color'),
+    namespace = require('rework-namespace'),
     autoprefixer = require('autoprefixer'),
     read = require('fs-extra').readFileSync,
     write = require('fs-extra').writeFileSync,
@@ -11,6 +12,7 @@ module.exports = function(options) {
     options = options || {};
     var src = options.src,
         dest = options.dest,
+        ns = options.namespace || 'topcoat',
         browsers = options.browsers || [],
         output;
 
@@ -24,6 +26,7 @@ module.exports = function(options) {
         .use(color())
         .use(rework.colors())
         .use(rework.extend())
+        .use(namespace(ns))
         .use(autoprefixer(browsers).rework)
         .toString();
 
