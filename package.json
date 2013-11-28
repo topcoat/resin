@@ -29,6 +29,6 @@
     "node-fs": "~0.1.7",
     "fs-extra": "~0.8.1",
     "rework-color": "~0.1.2",
-    "rework-namespace": "~0.1.0"
+    "rework-namespace": "~0.1.1"
   }
 }

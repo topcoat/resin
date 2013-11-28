@@ -12,7 +12,7 @@ module.exports = function(options) {
     options = options || {};
     var src = options.src,
         dest = options.dest,
-        ns = options.namespace || 'topcoat',
+        ns = options.namespace || '',
         browsers = options.browsers || [],
         output;
 

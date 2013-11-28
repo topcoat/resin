@@ -7,7 +7,8 @@ describe('resin', function() {
     it('should generate correct output', function() {
 
         var actual = resin({
-            src: 'test/fixtures/resin.test.css'
+            src: 'test/fixtures/resin.test.css',
+            namespace: 'topcoat'
         }),
             expected = read('test/expected/resin.expected.css', 'utf-8').toString().trim();
 
