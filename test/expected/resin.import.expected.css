@@ -1,289 +1,49 @@
-:root {
-  /* Call To Action */
-  var-color--cta: #fff;
-  var-background-color--cta: #288edf;
-  var-notification-color: #ec514e;
-  var-background-color-light--cta: hsla(207, 74%, 100%, 1);
-  var-border-color--cta: hsla(207, 74%, 0%, 1);
-  var-border--cta: 1px solid hsla(207, 74%, 0%, 1);
-  var-background-color--cta--down: hsla(207, 74%, 0%, 1);
-  var-background-color--cta--hover: hsla(207, 74%, 100%, 1);
-  var-box-shadow--cta: inset 0 1px rgba(255, 255, 255, 0.36);
-  var-box-shadow--cta--down: inset 0 1px rgba(0, 0, 0, 0.12);
-  var-font-weight--cta: 500;
-  var-text-shadow--cta: 0 -1px rgba(0, 0, 0, 0.36);
-  var-overflow: hidden;
-  var-border--focus: 1px solid #0036FF;
-  var-box-shadow--focus: 0 0 0 2px #6fb5f1;
-  var-border--invalid: 1px solid #fff;
-  /* Text Input */
-  var-placeholder-color--input: #c6c8c8;
-  var-color--focus: #000;
-  /* Radio input */
-  var-radio-offset: -109px;
-  var-radio-offset--checked: -74px;
-  var-radio-width: 37px;
-  var-radio-bgsize: 37px;
-  var-radio-height: 31px;
-  var-radio-line-height: 31px;
-  var-radio-margin: 15px;
-  /* Overlay */
-  var-overlay-bg-color: rgba(88, 90, 92, 0.7);
-  var-overlay-padding: 20px 10px;
-  var-overlay-bg-box-shadow: inset 0px 0px 115px 0px #000000;
-  var-overlay-width: 50%;
-  var-overlay-margin--left: - 50% / 2;
-  /* Textarea */
-  var-font-size--textarea--large: 1.3rem;
-  var-line-height--large: 1.3rem;
-  var-margin: 0;
-  /* Progress bar container */
-  var-bar-border-radius: 12px;
-  var-bar-width: 250px;
-  var-bar-height: 1.25rem;
-  /* Progress bar progress */
-  var-progress-border-radius: 12px 0 0 12px;
-  /* Switch */
-  var-content--switch__label--left: 'ON';
-  var-content--switch__label--right: 'OFF';
-  var-margin-bottom--switch__toggle: -1px;
-  var-margin-top--switch__toggle: -1px;
-  var-transition--switch__toggle: margin-left 0.05s ease-in-out;
-  var-margin-bottom--switch__toggle: -1px;
-  var-margin-top--switch__toggle: -1px;
-  /* Notification */
-  var-notification-padding: 0.15em 0.5em 0.2em;
-  var-notification-margin: 5px;
-  var-notification-border-radius: 2px;
-  var-notification-bg-color: #fff;
-  var-notification-color: #fff;
-  /* Search */
-  var-search-icon: url("../img/search.svg");
+/**
+*
+* Copyright 2012 Adobe Systems Inc.;
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*
+*/
+
+@font-face {
+  font-family: "Source Sans";
+  src: url('../font/SourceSansPro-Regular.otf');
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url('../font/SourceSansPro-Light.otf');
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url('../font/SourceSansPro-Semibold.otf');
+  font-weight: 600;
 }
 
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
-
-:root {
-  var-font-size: 16px;
-  var-font-size--large: 1.3rem;
-  var-font-weight: 400;
-  var-font-weight--large: 400;
-  var-letter-spacing: 1px;
-  var-border-radius: 6px;
-  var-border-radius--large: 30px;
-  var-border-radius--huge: 40px;
-  var-padding: 0 1.25rem;
-  var-padding--large: 0 1.25rem;
-  var-height: 3rem;
-  var-height--large: 4.375rem;
-  var-line-height: 3rem;
-  var-line-height--large: 4.375rem;
-  var-vertical-align: top;
-  /* Containers */
-  var-padding--container: 2rem;
-  /* Icon Button */
-  var-size--icon: 3rem * 0.54;
-  var-size--icon--large: 4.375rem * 0.571428571;
-  var-padding--icon-button: 0 3rem / 4;
-  var-icon-top: -1px;
-  var-icon-top--large: -2px;
-  /* Navigation bar */
-  var-padding--navigation-bar: 1rem;
-  /* List */
-  var-padding--list-header: 4px 20px;
-  var-padding--list-item: 1.25rem;
-  var-font-size--list-header: .9em;
-  var-font-weight--list-header: 400;
-  /* Search Input */
-  var-search-icon: url("../img/search.svg");
-  var-background-image--search-input: url("../img/search.svg");
-  /* Text Area */
-  var-font-size--textarea: 2.5rem;
-  var-font-size--textarea--large: 3rem;
-  /* Checkbox */
-  var-size--checkbox: 2rem;
-  var-border-radius--checkbox: 3px;
-  var-top--checkmark: 1px;
-  var-left--checkmark: 2px;
-  var-width--checkmark__tail: 28px;
-  var-height--checkmark__foot: 11px;
-  var-border-radius--checkmark: 2px;
-  var-border-width--checkmark: 7px;
-  var-transform--checkmark: rotate(-50deg);
-  /* Radio */
-  var-size--radio-button: 1.875rem;
-  var-size--radio-button--checked: 0.875rem;
-  var-position--radio-button--checked: 7px;
-  /* Range input */
-  var-width--range__thumb: 2rem;
-  var-height--range__track: 1rem;
-  /* Search Input */
-  var-padding--search-input: 0 0 0 2rem;
-  var-padding--search-input--large: 0 0 0 2.9rem;
-  /* Switch */
-  var-width--switch: 6rem;
-  var-width--switch__label: 5rem;
-  var-right--switch__label--left: 1rem;
-  var-padding-left--switch__label--left: 1.5rem;
-  var-width--switch__toggle: 2rem;
-  var-margin-left--switch__toggle: -1.3rem;
-  var-left--switch__label--right: 1rem;
-  var-padding-left--switch__label--right: 2rem;
-  var-margin-left--switch__toggle--checked: 2.7rem;
+body {
+  margin: 0;
+  padding: 0;
+  background: var-background--body;
+  color: #000;
+  font: 16px "Source Sans", helvetica, arial, sans-serif;
+  font-weight: 400;
 }
 
-:root {
-  /* ---------- colors ---------- */
-  var-color: #c6c8c8;
-  var-background-color: #595b5b;
-  var-background--body: #4B4D4E;
-  var-highlight-color: #fff;
-  var-shadow-color: #000;
-  /* ---------- darken ---------- */
-  var-dark: 5;
-  var-darker: 8;
-  var-darkest: 15;
-  /* ---------- lighten ---------- */
-  var-light: 3;
-  var-lighter: 9;
-  var-lightest: 24;
-  /* ---------- alphas ---------- */
-  var-alpha--high: 0.1;
-  var-alpha--med: 0.23;
-  var-alpha--low: 0.05;
-  /* ---------- thickness ---------- */
-  var-border-thickness: 1px;
-  /* ---------- shadows ---------- */
-  var-box-shadow--highlight: 0 -1px rgba( 0, 0, 0, 0.69 );
-  var-background-color--down: hsla(200, 2%, 0%, 1);
-  var-background-color--hover: hsla(200, 2%, 100%, 1);
-  var-border: 1px solid hsla(180, 1%, 0%, 1);
-  var-box-shadow: inset 0 1px hsla(0, 0%, 0%, 1);
-  var-box-shadow--down: inset 0 1px rgba(0, 0, 0, 0.05);
-  var-text-shadow: 0 -1px rgba( 0, 0, 0, 0.69 );
-  var-background-color--input: hsla(180, 1%, 0%, 1);
-  var-border-color: hsla(180, 1%, 0%, 1);
-  /* Icons */
-  var-menu-stack-icon: url("../img/hamburger_light.svg");
-  /* Navigation Bar */
-  var-color--navigation-bar: #fff;
-  var-box-shadow--navigation-bar: inset 0 -1px hsla(180, 1%, 0%, 1), 0 1px hsla(180, 1%, 0%, 1);
-  /* Text Input */
-  var-color--placeholder: hsla(180, 2%, 100%, 1);
-  var-color--focus: #fff;
-  var-background-color--text-input: hsla(180, 1%, 0%, 1);
-  var-background-color--text-input--focus: #595b5b;
-  var-box-shadow--text-input: inset 0 1px 0 rgba(0, 0, 0, 0.23);
-  /* List */
-  var-background-color--list: hsla(180, 1%, 0%, 1);
-  var-border-top--list-container: 1px solid hsla(180, 1%, 0%, 1);
-  var-border-top--list: 1px solid hsla(180, 1%, 0%, 1);
-  var-border-bottom--list: 1px solid hsla(180, 1%, 100%, 1);
-  var-border-top--list-item--first: 1px solid rgba(0, 0, 0, 0.05);
-  var-border-top--list-item: 1px solid hsla(180, 1%, 100%, 1);
-  var-border-bottom--list-item: 1px solid hsla(180, 1%, 0%, 1);
-  var-color--list-header: #c6c8c8;
-  var-text-shadow--list-header: 0 1px 0 rgba(255, 255, 255, 0.1);
-  var-border-top--list-header: 1px solid rgba(255, 255, 255, 0.1);
-  var-border-bottom--list-header: 1px solid rgba(255, 255, 255, 0.05);
-  var-background-color--list-header: hsla(200, 2%, 0%, 1);
-  /* Overlay */
-  var-modal-bg-color: #595b5b;
-  var-overlay__header-border: 1px solid hsla(180, 1%, 0%, 1);
-  /* Progress bar */
-  var-bar-bg-color: hsla(200, 2%, 0%, 1);
-  var-progress-bg-color: #595b5b;
-  /* Checkbox */
-  var-border--checkmark: 7px solid #c6c8c8;
-  /* Range input */
-  var-range-background: hsla(200, 2%, 0%, 1);
-  var-range__slider-border: 1px solid hsla(180, 1%, 0%, 1);
-  var-range__slider-background: #595b5b;
-  var-range__slider-bg-size: 7px 18px;
-  var-range__slider-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05);
-  /* Radio Button */
-  var-border--radio-button: 1px solid rgba(0, 0, 0, 0.05);
-  var-background--radio-button: #c6c8c8;
-  var-box-shadow--radio-button: 0 1px rgba(255, 255, 255, 0.1);
-  /* Tab bar */
-  var-color--tab-bar--active: #288edf;
-  var-background-color--tab-bar--active: hsla(200, 2%, 0%, 1);
-  var-box-shadow--tab-bar--active: inset 0 0 1px rgba(0, 0, 0, 0.05);
-  /* Switch */
-  var-color--switch__label--left: #288edf;
-  var-background-color--switch__label--left: hsla(200, 2%, 0%, 1);
-  var-background-color--switch__label--right: hsla(200, 2%, 0%, 1);
+:focus {
+  outline-color: transparent;
+  outline-style: none;
 }
-
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
-
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
-
-/**
-*
-* Copyright 2012 Adobe Systems Inc.;
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-* http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*
-*/
 
 .topcoat-button,
 .topcoat-button--quiet,
@@ -386,6 +146,8 @@
 /* topdoc
   name: Button
   description: A simple button
+  npm: topcoat-button
+  git: git@github.com:topcoat/button.git
   modifiers:
     :active: Active state
     :disabled: Disabled state
@@ -472,6 +234,8 @@
 /* topdoc
   name: Quiet Button
   description: A simple, yet quiet button
+  npm: topcoat-button
+  git: git@github.com:topcoat/button.git
   modifiers:
     :active: Quiet button active state
     :disabled: Disabled state
@@ -507,6 +271,8 @@
 /* topdoc
   name: Large Button
   description: A big ol button
+  npm: topcoat-button
+  git: git@github.com:topcoat/button.git
   modifiers:
     :active: Active state
     :disabled: Disabled state
@@ -534,6 +300,8 @@
 /* topdoc
   name: Large Quiet Button
   description: A large, yet quiet button
+  npm: topcoat-button
+  git: git@github.com:topcoat/button.git
   modifiers:
     :active: Active state
     :disabled: Disabled state
@@ -554,6 +322,8 @@
 /* topdoc
   name: Call To Action Button
   description: A CALL TO ARMS, er, ACTION!
+  npm: topcoat-button
+  git: git@github.com:topcoat/button.git
   modifiers:
     :active: Active state
     :disabled: Disabled state
@@ -596,6 +366,8 @@
 /* topdoc
   name: Large Call To Action Button
   description: Like call to action, but bigger
+  npm: topcoat-button
+  git: git@github.com:topcoat/button.git
   modifiers:
     :active: Active state
     :disabled: Disabled state
@@ -619,3 +391,4 @@
   line-height: 4.375rem;
   padding: 0 1.25rem;
 }
+

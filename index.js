@@ -12,15 +12,17 @@ module.exports = function(options) {
     options = options || {};
     var src = options.src,
         dest = options.dest,
+        license = options.license || '',
         ns = options.namespace || '',
         browsers = options.browsers || [],
+        regex = new RegExp(license, 'g'),
         output;
 
     if (!exists(src)) {
         throw new Error("Sorry, I couldn't find an input file. Did you supply one?");
     }
 
-    output = rework(read(src, 'utf8'))
+    output = rework(read(src, 'utf8').replace(regex,''))
         .use(imprt())
         .use(vars())
         .use(color())
