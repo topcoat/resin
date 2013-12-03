@@ -25,7 +25,9 @@ var resin = require('topcoat-resin');
         // Tell it what browsers to prefix for
         browsers: ['last 1 version', 'ios', 'android 4'],
         // Add a namespace to your classes to avoid collisions
-        namespace: 'dam'
+        namespace: 'dam',
+        // Add a license to the final output
+        license: '// Copyright 2013 and stuff \n'
     });
 
 ```
@@ -73,6 +75,7 @@ Resin supports:
 * [Extend](https://github.com/visionmedia/rework#extend)
 * [Namespacing](https://gituhub.com/kristoferjoseph/rework-namespace)
 * [Autoprefixer](https://github.com/ai/autoprefixer)
+* License addition
 
 TODO
 ----
@@ -85,7 +88,5 @@ TODO
     * [issue#3](https://github.com/topcoat/resin/issues/3)
 * Optimize
     * [issues#4](https://github.com/topcoat/resin/issues/4)
-* Banner
-    * [issues#5](https://github.com/topcoat/resin/issues/5)
 * Source Maps
     * [issues#6](https://github.com/topcoat/resin/issues/6)
