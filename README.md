@@ -1,6 +1,8 @@
 Resin
 =====
 
+[![Build Status](https://travis-ci.org/topcoat/resin.png?branch=master)](https://travis-ci.org/topcoat/resin)
+
 Opinionated CSS preprocessor for Topcoat made with
 [Rework](http://github.com/visionmedia/rework).
 
