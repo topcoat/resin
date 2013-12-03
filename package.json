@@ -1,6 +1,6 @@
 {
   "name": "topcoat-resin",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Opinionated CSS Preprocessor for Topcoat based on rework",
   "main": "index.js",
   "scripts": {
