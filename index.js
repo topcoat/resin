@@ -15,14 +15,13 @@ module.exports = function(options) {
         license = options.license || '',
         ns = options.namespace || '',
         browsers = options.browsers || [],
-        regex = new RegExp(license, 'g'),
         output;
 
     if (!exists(src)) {
         throw new Error("Sorry, I couldn't find an input file. Did you supply one?");
     }
 
-    output = rework(read(src, 'utf8').replace(regex,''))
+    output = rework(read(src, 'utf8'))
         .use(imprt())
         .use(vars())
         .use(color())
@@ -30,7 +29,7 @@ module.exports = function(options) {
         .use(rework.extend())
         .use(namespace(ns))
         .use(autoprefixer(browsers).rework)
-        .toString();
+        .toString().replace(/(\/\*[\s\S]*?(license)[\s\S]*?\*\/)([\s\t]*(\r\n|\n|\r))/gi, '');
 
     return output;
 };
