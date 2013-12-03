@@ -31,5 +31,5 @@ module.exports = function(options) {
         .use(autoprefixer(browsers).rework)
         .toString().replace(/(\/\*[\s\S]*?(license)[\s\S]*?\*\/)([\s\t]*(\r\n|\n|\r))/gi, '');
 
-    return output;
+    return license + output;
 };
