@@ -5,7 +5,6 @@ var rework = require('rework'),
     namespace = require('rework-namespace'),
     autoprefixer = require('autoprefixer'),
     read = require('fs-extra').readFileSync,
-    write = require('fs-extra').writeFileSync,
     exists = require('fs-extra').existsSync;
 
 module.exports = function(options) {
