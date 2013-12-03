@@ -1,9 +1,3 @@
-:root {
-  var-blue: #0cc;
-  var-grey: #666;
-  var-light-grey: rgba(102, 102, 102, 0.5);
-}
-
 .topcoat-button--large {
   border: 1px solid #0cc;
   background: rgba(102, 102, 102, 0.5);

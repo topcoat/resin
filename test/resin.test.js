@@ -24,9 +24,11 @@ describe('resin', function() {
     });
 
     it('should import from node_modules', function() {
-        var actual = resin({
-            src: 'test/fixtures/resin.import.test.css'
-        }),
+        var lic = read('test/fixtures/license.txt', 'utf-8'),
+            actual = resin({
+                src: 'test/fixtures/resin.import.test.css',
+                license: lic
+            }),
             expected = read('test/expected/resin.import.expected.css', 'utf-8').toString().trim();
 
         assert.equal(actual, expected, 'Generated output should match expected file');

@@ -5,13 +5,13 @@ var rework = require('rework'),
     namespace = require('rework-namespace'),
     autoprefixer = require('autoprefixer'),
     read = require('fs-extra').readFileSync,
-    write = require('fs-extra').writeFileSync,
     exists = require('fs-extra').existsSync;
 
 module.exports = function(options) {
     options = options || {};
     var src = options.src,
         dest = options.dest,
+        license = options.license || '',
         ns = options.namespace || '',
         browsers = options.browsers || [],
         output;
@@ -28,7 +28,7 @@ module.exports = function(options) {
         .use(rework.extend())
         .use(namespace(ns))
         .use(autoprefixer(browsers).rework)
-        .toString();
+        .toString().replace(/(\/\*[\s\S]*?(license)[\s\S]*?\*\/)([\s\t]*(\r\n|\n|\r))/gi, '');
 
-    return output;
+    return license + output;
 };
