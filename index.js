@@ -1,7 +1,6 @@
 var rework = require('rework'),
     imprt = require('rework-npm'),
     vars = require('rework-vars'),
-    color = require('rework-color'),
     namespace = require('rework-namespace'),
     autoprefixer = require('autoprefixer'),
     read = require('fs-extra').readFileSync,
@@ -23,7 +22,6 @@ module.exports = function(options) {
     output = rework(read(src, 'utf8'))
         .use(imprt())
         .use(vars())
-        .use(color())
         .use(rework.colors())
         .use(rework.extend())
         .use(namespace(ns))

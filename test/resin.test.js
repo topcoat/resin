@@ -8,7 +8,8 @@ describe('resin', function() {
 
         var actual = resin({
             src: 'test/fixtures/resin.test.css',
-            namespace: 'topcoat'
+            namespace: 'topcoat',
+            license: read('test/fixtures/license.txt')
         }),
             expected = read('test/expected/resin.expected.css', 'utf-8').toString().trim();
 
@@ -21,17 +22,6 @@ describe('resin', function() {
                 src: ''
             });
         }, Error);
-    });
-
-    it('should import from node_modules', function() {
-        var lic = read('test/fixtures/license.txt', 'utf-8'),
-            actual = resin({
-                src: 'test/fixtures/resin.import.test.css',
-                license: lic
-            }),
-            expected = read('test/expected/resin.import.expected.css', 'utf-8').toString().trim();
-
-        assert.equal(actual, expected, 'Generated output should match expected file');
     });
 
 });
