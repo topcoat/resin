@@ -24,4 +24,17 @@ describe('resin', function() {
         }, Error);
     });
 
+    it('should not fail when passed a debug flag', function() {
+
+        var actual = resin({
+            src: 'test/fixtures/resin.test.css',
+            namespace: 'topcoat',
+            license: read('test/fixtures/license.txt'),
+            debug: true
+        }),
+            expected = read('test/expected/resin.expected.css', 'utf-8').toString().trim();
+
+        assert.equal(actual, expected, 'Generated output should match expected file');
+    });
+
 });

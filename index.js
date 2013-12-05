@@ -13,6 +13,7 @@ module.exports = function(options) {
         license = options.license || '',
         ns = options.namespace || '',
         browsers = options.browsers || [],
+        debug = options.debug || false,
         output;
 
     if (!exists(src)) {
@@ -26,7 +27,7 @@ module.exports = function(options) {
         .use(rework.extend())
         .use(namespace(ns))
         .use(autoprefixer(browsers).rework)
-        .toString().replace(/(\/\*[\s\S]*?(license)[\s\S]*?\*\/)([\s\t]*(\r\n|\n|\r))/gi, '');
+        .toString({sourcemap: debug}).replace(/(\/\*[\s\S]*?(license)[\s\S]*?\*\/)([\s\t]*(\r\n|\n|\r))/gi, '');
 
     return license + output;
 };
