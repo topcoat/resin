@@ -29,7 +29,9 @@ var resin = require('topcoat-resin');
         // Add a namespace to your classes to avoid collisions
         namespace: 'dam',
         // Add a license to the final output
-        license: '// Copyright 2013 and stuff \n'
+        license: '// Copyright 2013 and stuff \n',
+        // Generate sourecemaps for debugging
+        debug: true
     });
 
 ```
@@ -78,6 +80,7 @@ Resin supports:
 * [Namespacing](https://gituhub.com/kristoferjoseph/rework-namespace)
 * [Autoprefixer](https://github.com/ai/autoprefixer)
 * License addition
+* Source maps for debugging
 
 TODO
 ----
@@ -90,5 +93,3 @@ TODO
     * [issue#3](https://github.com/topcoat/resin/issues/3)
 * Optimize
     * [issues#4](https://github.com/topcoat/resin/issues/4)
-* Source Maps
-    * [issues#6](https://github.com/topcoat/resin/issues/6)
