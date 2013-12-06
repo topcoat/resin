@@ -77,7 +77,7 @@ Resin supports:
 * [Variables](https://github.com/visionmedia/rework-vars)
 * [Colors](https://github.com/visionmedia/rework#colors)
 * [Extend](https://github.com/visionmedia/rework#extend)
-* [Namespacing](https://gituhub.com/kristoferjoseph/rework-namespace)
+* [Namespacing](https://github.com/kristoferjoseph/rework-namespace)
 * [Autoprefixer](https://github.com/ai/autoprefixer)
 * License addition
 * Source maps for debugging
