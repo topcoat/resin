@@ -22,10 +22,10 @@
   "dependencies": {
     "rework": "~0.18.3",
     "rework-npm": "0.0.2",
-    "autoprefixer": "~0.8.20131104",
+    "autoprefixer": "~0.8.20131213",
     "node-fs": "~0.1.7",
     "fs-extra": "~0.8.1",
-    "rework-namespace": "~0.1.1",
+    "rework-namespace": "~0.1.2",
     "rework-vars": "~1.1.0"
   }
 }
