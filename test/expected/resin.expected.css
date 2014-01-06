@@ -21,6 +21,7 @@
 }
 
 .topcoat-button--large {
+  padding: 0 0.75rem;
   width: 6rem;
   height: 3rem;
   box-shadow: 0 1px #666;

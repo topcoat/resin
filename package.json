@@ -26,6 +26,8 @@
     "node-fs": "~0.1.7",
     "fs-extra": "~0.8.1",
     "rework-namespace": "~0.1.2",
-    "rework-vars": "~1.1.0"
+    "rework-vars": "~1.1.0",
+    "rework-calc": "~0.2.1",
+    "rework-color-function": "~0.1.2"
   }
 }

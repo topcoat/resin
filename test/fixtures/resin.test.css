@@ -2,6 +2,7 @@
     var-blue: #0cc;
     var-grey: #666;
     var-light-grey: rgba(var(grey), 0.5);
+    var-height--large: 3rem;
 }
 
 %button {
@@ -11,6 +12,7 @@
 
 .button--large {
     extend: %button;
+    padding: 0 calc(var(height--large) / 4);
     width: 6rem;
     height: 3rem;
     box-shadow: 0 1px var(grey);
