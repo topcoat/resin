@@ -3,7 +3,7 @@ Resin
 
 [![Build Status](https://travis-ci.org/topcoat/resin.png?branch=master)](https://travis-ci.org/topcoat/resin)
 
-A future facing CSS preprocessor for Topcoat made with
+A future facing CSS preprocessor made with
 [Rework](http://github.com/visionmedia/rework).
 
 Installation
