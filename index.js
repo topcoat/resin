@@ -29,7 +29,7 @@ module.exports = function(options) {
         .use(rework.extend())
         .use(namespace(ns))
         .use(autoprefixer(browsers).rework)
-        .toString({sourcemap: debug}).replace(/(\/\*[\s\S]*?(license)[\s\S]*?\*\/)([\s\t]*(\r\n|\n|\r))/gi, '');
+        .toString({sourcemap: debug}).replace(/(\/\*\*[\s\S]*?(license)[\s\S]*?\*\/)([\s\t]*)/gi, '');
 
     return license + output;
 };
