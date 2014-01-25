@@ -32,7 +32,7 @@ describe('resin', function() {
             license: read('test/fixtures/license.txt'),
             debug: true
         }),
-            expected = read('test/expected/resin.expected.css', 'utf-8').toString().trim();
+            expected = read('test/expected/resin.debug.expected.css', 'utf-8').toString().trim();
 
         assert.equal(actual, expected, 'Generated output should match expected file');
     });

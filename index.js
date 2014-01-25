@@ -1,7 +1,7 @@
 var rework = require('rework'),
     imprt = require('rework-npm'),
     vars = require('rework-vars'),
-    calc = require('rework-calc'),
+    inherit = require('rework-inherit'),
     namespace = require('rework-namespace'),
     autoprefixer = require('autoprefixer'),
     read = require('fs-extra').readFileSync,
@@ -24,9 +24,16 @@ module.exports = function(options) {
     output = rework(read(src, 'utf8'))
         .use(imprt())
         .use(vars())
-        .use(calc)
+        .use(rework.function({
+            add: function(a,b) { return a + b; },
+            subtract: function(a,b) { return a - b; },
+            multiply: function(a,b) { return a * b; },
+            divide: function(a,b) { return a / b;},
+            floor: Math.floor,
+            parseInt: function(a) { return parseInt(a,10); }
+        }))
         .use(rework.colors())
-        .use(rework.extend())
+        .use(inherit())
         .use(namespace(ns))
         .use(autoprefixer(browsers).rework)
         .toString({sourcemap: debug}).replace(/(\/\*\*[\s\S]*?(license)[\s\S]*?\*\/)([\s\t]*(\r\n|\n|\r))/gi, '');

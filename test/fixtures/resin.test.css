@@ -12,7 +12,7 @@
 
 .button--large {
     extend: %button;
-    padding: 0 calc(var(height--large) / 4);
+    padding: 0 divide(parseInt(var(height--large), 10), 4)rem;
     width: 6rem;
     height: 3rem;
     box-shadow: 0 1px var(grey);

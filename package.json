@@ -4,7 +4,7 @@
   "description": "Opinionated CSS Preprocessor for Topcoat based on rework",
   "main": "index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "mocha test/*.js"
   },
   "repository": {
     "type": "git",
@@ -16,18 +16,16 @@
     "url": "https://github.com/topcoat/resin/issues"
   },
   "devDependencies": {
-    "grunt-simple-mocha": "~0.4.0",
-    "grunt": "~0.4.1"
+    "mocha": "~1.17.1",
+    "autoprefixer": "~0.8.20131213"
   },
   "dependencies": {
-    "rework": "~0.18.3",
-    "rework-npm": "0.0.2",
-    "autoprefixer": "~0.8.20131213",
-    "node-fs": "~0.1.7",
-    "fs-extra": "~0.8.1",
+    "rework": "~0.20.2",
+    "rework-npm": "~0.3.0",
+    "autoprefixer": "~0.8",
+    "rework-vars": "~2.0.2",
     "rework-namespace": "~0.1.2",
-    "rework-vars": "~1.1.0",
-    "rework-calc": "~0.2.1",
-    "rework-color-function": "~0.1.2"
+    "fs-extra": "~0.8.1",
+    "rework-inherit": "~0.2.1"
   }
 }
