@@ -24,8 +24,8 @@ module.exports = function(options) {
 
     output = rework(read(src, 'utf8'))
         .use(imprt())
-        .use(dedupe())
         .use(vars())
+        .use(dedupe())
         .use(rework.colors())
         .use(inherit())
         .use(namespace(ns))

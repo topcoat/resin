@@ -18,7 +18,12 @@
 
 @import "topcoat-button-base";
 
+:root {
+  var-green: #00cc00;
+}
+
 .button--quiet {
   extend: %button;
+  background: var(green);
   border: none;
 }

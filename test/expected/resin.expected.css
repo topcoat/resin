@@ -68,5 +68,6 @@
 }
 
 .topcoat-button--quiet {
+  background: #00cc00;
   border: none;
 }
