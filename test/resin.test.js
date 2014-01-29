@@ -1,6 +1,7 @@
 var resin = require('..'),
     assert = require('assert'),
-    read = require('fs').readFileSync;
+    read = require('fs').readFileSync,
+    write = require('fs').writeFileSync;
 
 describe('resin', function() {
 

@@ -1,5 +1,6 @@
 var rework = require('rework'),
     imprt = require('rework-npm'),
+    dedupe = require('rework-deduplicate'),
     vars = require('rework-vars'),
     inherit = require('rework-inherit'),
     namespace = require('rework-namespace'),
@@ -23,15 +24,8 @@ module.exports = function(options) {
 
     output = rework(read(src, 'utf8'))
         .use(imprt())
+        .use(dedupe())
         .use(vars())
-        .use(rework.function({
-            add: function(a,b) { return a + b; },
-            subtract: function(a,b) { return a - b; },
-            multiply: function(a,b) { return a * b; },
-            divide: function(a,b) { return a / b;},
-            floor: Math.floor,
-            parseInt: function(a) { return parseInt(a,10); }
-        }))
         .use(rework.colors())
         .use(inherit())
         .use(namespace(ns))

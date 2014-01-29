@@ -1,3 +1,5 @@
+@import "topcoat-button-base";
+
 :root {
     var-blue: #0cc;
     var-grey: #666;
@@ -5,15 +7,18 @@
     var-height--large: 3rem;
 }
 
-%button {
-    border: 1px solid var(blue);
-    background: var(light-grey);
-}
 
 .button--large {
     extend: %button;
-    padding: 0 divide(parseInt(var(height--large), 10), 4)rem;
+    padding: 0 0.75rem;
     width: 6rem;
     height: 3rem;
     box-shadow: 0 1px var(grey);
+}
+
+@import "topcoat-button-base";
+
+.button--quiet {
+  extend: %button;
+  border: none;
 }

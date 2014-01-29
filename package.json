@@ -17,7 +17,9 @@
   },
   "devDependencies": {
     "mocha": "~1.17.1",
-    "autoprefixer": "~0.8.20131213"
+    "autoprefixer": "~0.8.20131213",
+    "topcoat-button-base": "~0.7.0",
+    "rework-deduplicate": "0.0.1"
   },
   "dependencies": {
     "rework": "~0.20.2",

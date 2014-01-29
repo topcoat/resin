@@ -15,9 +15,49 @@
 * limitations under the License.
 *
 */
-.topcoat-button--large {
-  border: 1px solid #0cc;
-  background: rgba(102, 102, 102, 0.5);
+.topcoat-button--large,
+.topcoat-button--quiet {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+.topcoat-button--large,
+.topcoat-button--quiet {
+  cursor: default;
+  user-select: none;
+}
+
+.topcoat-button--large,
+.topcoat-button--quiet {
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.topcoat-button--large,
+.topcoat-button--quiet {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.topcoat-button--large,
+.topcoat-button--quiet {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.topcoat-button--large,
+.topcoat-button--quiet {
+  text-overflow: ellipsis;
+}
+
+.topcoat-button--large,
+.topcoat-button--quiet {
+  text-decoration: none;
 }
 
 .topcoat-button--large {
@@ -25,4 +65,8 @@
   width: 6rem;
   height: 3rem;
   box-shadow: 0 1px #666;
+}
+
+.topcoat-button--quiet {
+  border: none;
 }
