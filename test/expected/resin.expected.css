@@ -67,6 +67,11 @@
   box-shadow: 0 1px #666;
 }
 
+.topcoat-button--large:before,
+.topcoat-button--large:after {
+  content: '';
+}
+
 .topcoat-button--quiet {
   background: #00cc00;
   border: none;

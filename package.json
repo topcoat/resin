@@ -1,7 +1,7 @@
 {
   "name": "topcoat-resin",
   "version": "0.4.2",
-  "description": "Opinionated CSS Preprocessor for Topcoat based on rework",
+  "description": "Future facing CSS Preprocessor for Topcoat based on rework",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/*.js"

@@ -16,6 +16,11 @@
     box-shadow: 0 1px var(grey);
 }
 
+.button--large:before,
+.button--large:after {
+  content: '';
+}
+
 @import "topcoat-button-base";
 
 :root {
