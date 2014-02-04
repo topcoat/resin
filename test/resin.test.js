@@ -36,7 +36,7 @@ describe('resin', function() {
             debug: true
         }),
             expected = read('test/expected/resin.debug.expected.css', 'utf-8').toString().trim();
-write('tmp/actual.css', actual);
+
         assert.equal(actual, expected, 'Generated output should match expected file');
     });
 
