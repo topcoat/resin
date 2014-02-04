@@ -10,7 +10,8 @@ describe('resin', function() {
         var actual = resin({
             src: 'test/fixtures/resin.test.css',
             namespace: 'topcoat',
-            license: read('test/fixtures/license.txt')
+            license: read('test/fixtures/license.txt'),
+            url: 'img/'
         }),
             expected = read('test/expected/resin.expected.css', 'utf-8').toString().trim();
 
@@ -31,10 +32,11 @@ describe('resin', function() {
             src: 'test/fixtures/resin.test.css',
             namespace: 'topcoat',
             license: read('test/fixtures/license.txt'),
+            url: 'img/',
             debug: true
         }),
             expected = read('test/expected/resin.debug.expected.css', 'utf-8').toString().trim();
-
+write('tmp/actual.css', actual);
         assert.equal(actual, expected, 'Generated output should match expected file');
     });
 

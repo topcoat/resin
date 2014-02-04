@@ -15,6 +15,7 @@ module.exports = function(options) {
         license = options.license || '',
         ns = options.namespace || '',
         browsers = options.browsers || [],
+        urlString = options.url || '',
         debug = options.debug || false,
         output;
 
@@ -28,6 +29,9 @@ module.exports = function(options) {
         .use(dedupe())
         .use(rework.colors())
         .use(inherit())
+        .use(rework.url(function(url) {
+          return urlString + url;
+        }))
         .use(namespace(ns))
         .use(autoprefixer(browsers).rework)
         .toString({sourcemap: debug}).replace(/(\/\*\*[\s\S]*?(license)[\s\S]*?\*\/)([\s\t]*(\r\n|\n|\r))/gi, '');
