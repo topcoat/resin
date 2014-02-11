@@ -1,10 +1,9 @@
 Resin
 =====
 
-[![Build Status](https://travis-ci.org/topcoat/resin.png?branch=master)](https://travis-ci.org/topcoat/resin)
+[![Build Status](https://travis-ci.org/kristoferjoseph/resin.png?branch=master)](https://travis-ci.org/kristoferjoseph/resin)
 
-A future facing CSS preprocessor made with
-[Rework](http://github.com/visionmedia/rework).
+A CSS preprocessor.
 
 Installation
 ------------
