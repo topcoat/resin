@@ -15,8 +15,8 @@ module.exports = function(options) {
         ns = options.namespace || '',
         browsers = options.browsers || [],
         urlString = options.url || '',
-        useVars = options.vars || true,
-        useExtend = options.extend || true,
+        useVars = options.vars || false,
+        useExtend = options.extend || false,
         debug = options.debug || false,
         output;
 
