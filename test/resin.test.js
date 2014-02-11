@@ -9,7 +9,9 @@ describe('resin', function() {
         var actual = resin({
             src: 'test/fixtures/resin.test.css',
             namespace: 'topcoat',
-            license: read('test/fixtures/license.txt'),
+            license: 'test/fixtures/license.txt',
+            vars: true,
+            extend: true,
             url: 'img/'
         }),
             expected = read('test/expected/resin.expected.css', 'utf-8').toString().trim();
@@ -30,7 +32,9 @@ describe('resin', function() {
         var actual = resin({
             src: 'test/fixtures/resin.test.css',
             namespace: 'topcoat',
-            license: read('test/fixtures/license.txt'),
+            license: 'test/fixtures/license.txt',
+            vars: true,
+            extend: true,
             url: 'img/',
             debug: true
         }),

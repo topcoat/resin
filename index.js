@@ -45,7 +45,11 @@ module.exports = function(options) {
     output = output.toString({sourcemap: debug}).replace(/(\/\*\*[\s\S]*?(license)[\s\S]*?\*\/)([\s\t]*(\r\n|\n|\r))/gi, '');
 
     if(license) {
-      output = license + output;
+      if(exists(license)) {
+        output = read(license) + output;
+      } else {
+        throw new Error("Sorry, I couldn't find the license file. Make sure you supply a valid path.");
+      }
     }
 
     return output;
