@@ -28,7 +28,7 @@ var resin = require('resin');
         // Add a namespace to your classes to avoid collisions
         namespace: 'dam',
         // Add a license to the final output
-        license: '// Copyright 2013 and stuff \n',
+        license: 'path/to/license.txt',
         // Generate sourecemaps for debugging
         debug: true
     });
