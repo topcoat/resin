@@ -29,6 +29,10 @@ var resin = require('resin');
         namespace: 'dam',
         // Add a license to the final output
         license: 'path/to/license.txt',
+        // Use the varibles plugin
+        variables: true,
+        // Use the inherit plugin
+        extend: true,
         // Generate sourecemaps for debugging
         debug: true
     });
