@@ -1,6 +1,6 @@
 {
   "name": "resin",
-  "version": "0.2.0",
+  "version": "0.0.0",
   "description": "resin CSS preprocessor",
   "main": "index.js",
   "scripts": {
