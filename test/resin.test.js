@@ -1,7 +1,6 @@
 var resin = require('..'),
     assert = require('assert'),
-    read = require('fs').readFileSync,
-    write = require('fs').writeFileSync;
+    read = require('fs').readFileSync;
 
 describe('resin', function() {
 
@@ -37,7 +36,7 @@ describe('resin', function() {
         }),
             expected = read('test/expected/resin.debug.expected.css', 'utf-8').toString().trim();
 
-        assert.equal(actual, expected, 'Generated output should match expected file');
+        assert.equal(actual, expected, 'Generated output should match expected debug file');
     });
 
 });

@@ -10,7 +10,7 @@ Installation
 ------------
 
 ```
-npm install topcoat-resin
+npm install resin
 
 ```
 
@@ -19,7 +19,7 @@ Usage
 
 ```js
 
-var resin = require('topcoat-resin');
+var resin = require('resin');
 
     resin({
         // Pass it a css file to process
@@ -41,7 +41,7 @@ stream etc.
 Example writing to a file:
 
  ```js
-var resin = require('topcoat-resin'),
+var resin = require('resin'),
     write = require('fs').writeFileSync,
     output;
 
@@ -93,3 +93,4 @@ TODO
     * [issue#3](https://github.com/topcoat/resin/issues/3)
 * Optimize
     * [issues#4](https://github.com/topcoat/resin/issues/4)
+

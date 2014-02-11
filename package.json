@@ -1,7 +1,7 @@
 {
-  "name": "topcoat-resin",
-  "version": "0.4.3",
-  "description": "Future facing CSS Preprocessor for Topcoat based on rework",
+  "name": "resin",
+  "version": "0.0.0",
+  "description": "resin CSS preprocessor",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/*.js"
@@ -10,25 +10,23 @@
     "type": "git",
     "url": "git://github.com/topcoat/resin.git"
   },
-  "author": "@dam",
+  "author": "Kristofer Joseph @dam",
   "license": "Apache2",
   "bugs": {
     "url": "https://github.com/topcoat/resin/issues"
   },
   "devDependencies": {
-    "mocha": "~1.17.1",
-    "autoprefixer": "~0.8.20131213",
-    "topcoat-button-base": "~0.7.0",
-    "rework-deduplicate": "0.0.1"
+    "mocha": "^1.17.1",
+    "autoprefixer": "^0.8.20131213",
+    "topcoat-button-base": "^0.7.0"
   },
   "dependencies": {
+    "rework-npm": "^0.3.0",
+    "autoprefixer": "^0.8",
+    "rework-vars": "^2.0.2",
+    "rework-namespace": "^0.1.2",
+    "rework-deduplicate": "^0.0.1",
     "rework": "~0.20.2",
-    "rework-npm": "~0.3.0",
-    "autoprefixer": "~0.8",
-    "rework-vars": "~2.0.2",
-    "rework-namespace": "~0.1.2",
-    "fs-extra": "~0.8.1",
-    "rework-inherit": "~0.2.1",
-    "rework-deduplicate": "0.0.1"
+    "rework-inherit": "~0.2.1"
   }
 }
