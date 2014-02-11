@@ -29,6 +29,7 @@ module.exports = function(options) {
     if(useVars) {
       output.use(vars());
     }
+    output.use(dedupe());
     if(useExtend) {
       output.use(inherit());
     }
