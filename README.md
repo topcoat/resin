@@ -81,15 +81,3 @@ Resin supports:
 * License addition
 * Source maps for debugging
 
-TODO
-----
-
-* [Topdoc](https://github.com/topcoat/topdoc)
-    * [issue#1](https://github.com/topcoat/resin/issues/1)
-* Functions
-    * [issue#2](https://github.com/topcoat/resin/issues/2)
-* Linter
-    * [issue#3](https://github.com/topcoat/resin/issues/3)
-* Optimize
-    * [issues#4](https://github.com/topcoat/resin/issues/4)
-
