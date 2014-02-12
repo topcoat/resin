@@ -78,7 +78,6 @@ Resin supports:
 
 * [Imports](https://github.com/conradz/rework-npm)
 * [Variables](https://github.com/visionmedia/rework-vars)
-* [Colors](https://github.com/visionmedia/rework#colors)
 * [Extend](https://github.com/visionmedia/rework#extend)
 * [Namespacing](https://github.com/kristoferjoseph/rework-namespace)
 * [Autoprefixer](https://github.com/ai/autoprefixer)

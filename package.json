@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/topcoat/resin.git"
+    "url": "git://github.com/kristoferjoseph/resin.git"
   },
   "author": "Kristofer Joseph @dam",
   "license": "Apache2",
   "bugs": {
-    "url": "https://github.com/topcoat/resin/issues"
+    "url": "https://github.com/kristoferjoseph/resin/issues"
   },
   "devDependencies": {
     "mocha": "^1.17.1",
