@@ -42,7 +42,8 @@ module.exports = function(options) {
       }));
     }
     output.use(autoprefixer(browsers).rework);
-    output = output.toString({sourcemap: debug}).replace(/(\/\*\*[\s\S]*?(license)[\s\S]*?\*\/)([\s\t]*(\r\n|\n|\r))/gi, '');
+    output = output.toString({sourcemap: debug})
+      .replace(/(\/\*\*[\s\S]*?(license)[\s\S]*?\*\/)([\s\t]*(\r\n|\n|\r))/gi, '');
 
     if(license) {
       if(exists(license)) {
