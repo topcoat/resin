@@ -24,6 +24,8 @@ var resin = require('topcoat-resin');
     resin({
         // Pass it a css file to process
         src: 'src/entry.css',
+        // Alternatively pass it the file contents, defaults to src
+        contents: 'body { color: rgba(#fff, 0.5); }',
         // Tell it what browsers to prefix for
         browsers: ['last 1 version', 'ios', 'android 4'],
         // Add a namespace to your classes to avoid collisions
@@ -31,7 +33,9 @@ var resin = require('topcoat-resin');
         // Add a license to the final output
         license: '// Copyright 2013 and stuff \n',
         // Generate sourecemaps for debugging
-        debug: true
+        debug: true,
+        // Extend resin further with more rework plugins
+        use: [rework.ease()]
     });
 
 ```
@@ -80,6 +84,7 @@ Resin supports:
 * [Namespacing](https://github.com/kristoferjoseph/rework-namespace)
 * [Autoprefixer](https://github.com/ai/autoprefixer)
 * License addition
+* Adding more rework plugins
 * Source maps for debugging
 
 TODO
