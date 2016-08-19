@@ -20,7 +20,8 @@ export default function resin(options = {}) {
   const urlPrefix = options.url || '';
   const useVars = options.vars || false;
   const useExtend = options.extend || false;
-  const debug = options.debug || false;
+  const sourcemap = options.sourcemap || false;
+  const inline = options.sourcemapInline || true;
 
   const plugins = [atImport({ skipDuplicates: false })];
 
@@ -35,8 +36,8 @@ export default function resin(options = {}) {
     plugins.push(namespace(ns));
   }
   if (urlPrefix) {
-    plugins.push(url({url: (urlString) =>
-      urlPrefix + urlString
+    plugins.push(url({ url: (urlString) =>
+      `${urlPrefix}${urlString}`,
     }));
   }
   plugins.push(autoprefixer({ browsers }));
@@ -48,10 +49,10 @@ export default function resin(options = {}) {
   }));
 
   const processOptions = { parser: inheritParser };
-  if(debug){
-    processOptions.from = options.src;
+  if (sourcemap) {
+    processOptions.from = src;
     processOptions.to = null;
-    processOptions.map = { inline: true };
+    processOptions.map = { inline };
   }
 
   return postcss(plugins).process(inputCSS, processOptions);

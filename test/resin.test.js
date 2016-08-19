@@ -1,6 +1,6 @@
 import test from 'ava';
 import fs from 'fs';
-import resin from '../src/index.js';
+import resin from '../src/lib/index.js';
 
 const read = fs.readFileSync;
 
@@ -26,7 +26,7 @@ test('should not fail when passed a debug flag', t => {
     vars: true,
     extend: true,
     url: 'img/',
-    debug: true,
+    sourcemap: true,
   }).then(result => {
     const actual = result.css.trim();
     t.is(actual, expected);
