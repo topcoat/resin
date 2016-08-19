@@ -19,7 +19,6 @@
 
 .topcoat-button--large,
 .topcoat-button--quiet {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-clip: padding-box;
 }

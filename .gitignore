@@ -6,3 +6,5 @@ docs.json
 npm-debug.log*
 .DS_Store
 /lib
+.nyc_output
+coverage

@@ -18,20 +18,17 @@ test('should generate correct output', t => {
   });
 });
 
-test('should throw error when no input file is supplied', t => {
-  t.throws(() => { resin({ src: '' }); }, /no such file or directory/);
-});
-
 test('should not fail when passed a debug flag', t => {
-  const actual = resin({
+  const expected = read('./expected/resin.debug.expected.css', 'utf-8').toString().trim();
+  return resin({
     src: './fixtures/resin.test.css',
     namespace: 'topcoat',
     vars: true,
     extend: true,
     url: 'img/',
     debug: true,
+  }).then(result => {
+    const actual = result.css.trim();
+    t.is(actual, expected);
   });
-  const expected = read('./expected/resin.debug.expected.css', 'utf-8').toString().trim();
-
-  t.is(actual, expected);
 });

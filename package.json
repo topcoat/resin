@@ -63,8 +63,9 @@
     "postcss-add-namespace": "^1.0.3",
     "postcss-css-variables": "^0.5.1",
     "postcss-deduplicate": "^1.0.1",
-    "postcss-import": "^8.1.2",
+    "postcss-import": "^7.1.3",
     "postcss-inherit": "^3.0.0",
+    "postcss-inherit-parser": "^0.1.4",
     "postcss-url": "^5.1.2"
   }
 }
