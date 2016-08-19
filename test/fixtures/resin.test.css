@@ -1,10 +1,10 @@
-@import"topcoat-button-base";
+@import "topcoat-button-base";
 
 :root {
-  var-blue: #0cc;
-  var-grey: #666;
-  var-light-grey: rgba(var(grey), 0.5);
-  var-height--large: 3rem;
+  --blue: #0cc;
+  --grey: #666;
+  --light-grey: rgba(var(--grey), 0.5);
+  --height--large: 3rem;
 }
 .button--large {
   extend: %button;
@@ -12,20 +12,19 @@
   width: 6rem;
   height: 3rem;
   background: url("bg-image.jpg");
-  box-shadow: 0 1px var(grey);
+  box-shadow: 0 1px var(--grey);
 }
 .button--large:before, .button--large:after {
   content:'';
 }
 
-@import"topcoat-button-base";
+@import "topcoat-button-base";
 
 :root {
-  var-green: #00cc00;
+  --green: #00cc00;
 }
 .button--quiet {
   extend: %button;
-  background: var(green);
+  background: var(--green);
   border: none;
 }
-

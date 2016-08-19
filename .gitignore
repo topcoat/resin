@@ -1,2 +1,8 @@
 node_modules/
 tmp
+logs
+docs.json
+*.log
+npm-debug.log*
+.DS_Store
+/lib
