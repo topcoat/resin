@@ -12,7 +12,7 @@ test.before(() => {
   fs.mkdirSync('./expected/tmp/');
 });
 
-test.after('cleanup', () => {
+test.after.always('cleanup', () => {
   fs.unlinkSync('./expected/tmp/index.css');
   fs.unlinkSync('./expected/tmp/index.css.map');
   fs.rmdirSync('./expected/tmp/');
