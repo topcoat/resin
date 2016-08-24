@@ -21,7 +21,7 @@
 @import "topcoat-button-base";
 
 :root {
-  --green: #00cc00;
+  --green: #0c0;
 }
 .button--quiet {
   extend: %button;
