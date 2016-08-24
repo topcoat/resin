@@ -8,6 +8,7 @@ import namespace from 'postcss-add-namespace';
 import autoprefixer from 'autoprefixer';
 import url from 'postcss-url';
 import fs from 'fs-extra';
+import path from 'path';
 import perfectionist from 'perfectionist';
 
 const read = fs.readFileSync;
@@ -55,10 +56,10 @@ export default function resin(options = {}) {
 
   const processOptions = { parser: inheritParser };
   if (src) {
-    processOptions.from = src;
+    processOptions.from = path.resolve(src);
   }
   if (output) {
-    processOptions.to = output;
+    processOptions.to = path.resolve(output);
   }
   if (sourcemap) {
     processOptions.map = { inline };

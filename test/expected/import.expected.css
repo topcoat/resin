@@ -1,0 +1,69 @@
+.topcoat-button--large,
+.topcoat-button--quiet {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+.topcoat-button--large,
+.topcoat-button--quiet {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.topcoat-button--large,
+.topcoat-button--quiet {
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.topcoat-button--large,
+.topcoat-button--quiet {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.topcoat-button--large,
+.topcoat-button--quiet {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.topcoat-button--large,
+.topcoat-button--quiet {
+  text-overflow: ellipsis;
+}
+
+.topcoat-button--large,
+.topcoat-button--quiet {
+  text-decoration: none;
+}
+
+.topcoat-button--large {
+  padding: 0 0.75rem;
+  width: 6rem;
+  height: 3rem;
+  background: url("img/bg-image.jpg");
+  box-shadow: 0 1px #666;
+}
+
+.topcoat-button--large:before,
+.topcoat-button--large:after {
+  content: '';
+}
+
+.topcoat-button--quiet {
+  background: #0c0;
+  border: none;
+}
+
+.topcoat-content {
+  cursor: pointer;
+}

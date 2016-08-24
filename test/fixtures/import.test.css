@@ -1,0 +1,5 @@
+@import "./resin.test.css";
+
+.content {
+  cursor: pointer;
+}

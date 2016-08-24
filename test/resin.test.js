@@ -52,3 +52,17 @@ test('should write to output file and use external sourcemap.', t => {
     t.is(actual, expected);
   });
 });
+
+test('should import local files.', t => {
+  const expected = read('./expected/import.expected.css', 'utf-8').toString().trim();
+  return resin({
+    src: './fixtures/import.test.css',
+    namespace: 'topcoat',
+    vars: true,
+    extend: true,
+    url: 'img/',
+  }).then(result => {
+    const actual = result.css.trim();
+    t.is(actual, expected);
+  });
+});

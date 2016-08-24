@@ -68,3 +68,13 @@ test.cb('should generate css with external sourcemap', t => {
     ${output}/test/fixtures/resin.test.css`)
   .end(t.end);
 });
+
+test.cb('should import local file', t => {
+  nixt()
+  .expect((result) => {
+    const expected = read('./expected/import.expected.css', 'utf-8').toString().trim();
+    t.is(result.stdout.trim(), expected);
+  })
+  .run('rsn --namespace \'topcoat\' -u \'img/\' ./fixtures/import.test.css')
+  .end(t.end);
+});
