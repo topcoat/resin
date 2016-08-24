@@ -1,6 +1,6 @@
 # Resin
 
-[![Build Status](https://travis-ci.org/kristoferjoseph/resin.svg?branch=master)](https://travis-ci.org/kristoferjoseph/resin) [![Code Climate](https://codeclimate.com/github/kristoferjoseph/resin/badges/gpa.svg)](https://codeclimate.com/github/kristoferjoseph/resin) [![Test Coverage](https://codeclimate.com/github/kristoferjoseph/resin/badges/coverage.svg)](https://codeclimate.com/github/kristoferjoseph/resin/coverage) [![Issue Count](https://codeclimate.com/github/kristoferjoseph/resin/badges/issue_count.svg)](https://codeclimate.com/github/kristoferjoseph/resin)
+[![Build Status](https://travis-ci.org/kristoferjoseph/resin.svg?branch=master)](https://travis-ci.org/kristoferjoseph/resin) [![Code Climate](https://codeclimate.com/github/kristoferjoseph/resin/badges/gpa.svg)](https://codeclimate.com/github/kristoferjoseph/resin) [![Test Coverage](https://codeclimate.com/github/kristoferjoseph/resin/badges/coverage.svg)](https://codeclimate.com/github/kristoferjoseph/resin/coverage) [![Issue Count](https://codeclimate.com/github/kristoferjoseph/resin/badges/issue_count.svg)](https://codeclimate.com/github/kristoferjoseph/resin/issues)
 
 A CSS preprocessor.
 
@@ -41,21 +41,19 @@ Example writing to a file:
 
 ```js
 var resin = require('resin'),
-    write = require('fs').writeFileSync,
-    output;
+  write = require('fs').writeFileSync,
+  output;
 
-    resin({
-        // Pass it a css file to process
-        src: 'src/entry.css',
-        // Tell it what browsers to prefix for
-        browsers: ['last 1 version', 'ios', 'android 4']
-        // Add a namespace to your classes to avoid collisions
-        namespace: 'dam'
-    }).then(function(result){
-      write('path/to/output/dir/filename.css', result.css);
-    });
-
-    write('path/to/output/dir/filename.css', output);
+resin({
+  // Pass it a css file to process
+  src: 'src/entry.css',
+  // Tell it what browsers to prefix for
+  browsers: ['last 1 version', 'ios', 'android 4']
+  // Add a namespace to your classes to avoid collisions
+  namespace: 'dam'
+}).then(function(result){
+  write('path/to/output/dir/filename.css', result.css);
+});
 ```
 
 ## Entry CSS file
