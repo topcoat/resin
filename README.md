@@ -1,7 +1,7 @@
 Resin
 =====
 
-[![Build Status](https://travis-ci.org/kristoferjoseph/resin.png?branch=master)](https://travis-ci.org/kristoferjoseph/resin)
+[![Build Status](https://travis-ci.org/kristoferjoseph/resin.svg?branch=master)](https://travis-ci.org/kristoferjoseph/resin)
 
 A CSS preprocessor.
 
@@ -83,4 +83,3 @@ Resin supports:
 * [Autoprefixer](https://github.com/ai/autoprefixer)
 * License addition
 * Source maps for debugging
-
