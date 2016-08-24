@@ -1,5 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import test from 'ava';
 import fs from 'fs';
+import appRoot from 'app-root-path';
 import resin from '../src/lib/index.js';
 
 const read = fs.readFileSync;
@@ -29,6 +31,24 @@ test('should not fail when passed a debug flag', t => {
     sourcemap: true,
   }).then(result => {
     const actual = result.css.trim();
+    t.is(actual, expected);
+  });
+});
+
+test('should write to output file and use external sourcemap.', t => {
+  const expected = read('./expected/resin.expected.css.map', 'utf-8').toString().trim();
+  const output = appRoot.path;
+  return resin({
+    src: `${output}/test/fixtures/resin.test.css`,
+    output: `${output}/test/expected/tmp/index.css`,
+    namespace: 'topcoat',
+    vars: true,
+    extend: true,
+    url: 'img/',
+    sourcemap: true,
+    sourcemapInline: false,
+  }).then(result => {
+    const actual = result.map.toString().trim();
     t.is(actual, expected);
   });
 });

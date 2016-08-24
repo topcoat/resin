@@ -3,8 +3,11 @@
   "version": "0.3.0",
   "description": "resin CSS preprocessor",
   "main": "lib/index.js",
+  "bin": {
+    "rsn": "./bin/index.js"
+  },
   "scripts": {
-    "compile": "babel -d lib/ src/",
+    "compile": "babel -d ./ src/",
     "prepublish": "npm run compile",
     "test": "ava",
     "coverage": "nyc npm test",
@@ -31,13 +34,15 @@
   },
   "nyc": {
     "include": [
-      "src/*.js"
+      "src/lib/*.js",
+      "bin/index.js"
     ],
     "require": [
       "babel-register"
     ]
   },
   "devDependencies": {
+    "app-root-path": "^1.3.0",
     "ava": "^0.16.0",
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.1",
@@ -51,6 +56,7 @@
     "eslint-plugin-import": "^1.12.0",
     "eslint-plugin-jsx-a11y": "^2.1.0",
     "eslint-plugin-react": "^6.0.0",
+    "nixt": "^0.5.0",
     "nyc": "^8.1.0",
     "tap-difflet": "^0.6.0",
     "topcoat-button-base": "^0.10.2"

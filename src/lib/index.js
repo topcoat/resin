@@ -13,15 +13,20 @@ import perfectionist from 'perfectionist';
 const read = fs.readFileSync;
 
 export default function resin(options = {}) {
-  const src = options.src;
-  const inputCSS = read(src, 'utf8');
+  const src = options.src || false;
+  const inputCSS = options.rawcss || read(src, 'utf8');
+  const output = options.output || false;
   const ns = options.namespace || '';
   const browsers = options.browsers || 'last 2 version';
   const urlPrefix = options.url || '';
   const useVars = options.vars || false;
   const useExtend = options.extend || false;
   const sourcemap = options.sourcemap || false;
-  const inline = options.sourcemapInline || true;
+  let inline = true;
+
+  if ({}.hasOwnProperty.call(options, 'sourcemapInline')) {
+    inline = options.sourcemapInline;
+  }
 
   const plugins = [atImport({ skipDuplicates: false })];
 
@@ -49,9 +54,13 @@ export default function resin(options = {}) {
   }));
 
   const processOptions = { parser: inheritParser };
-  if (sourcemap) {
+  if (src) {
     processOptions.from = src;
-    processOptions.to = null;
+  }
+  if (output) {
+    processOptions.to = output;
+  }
+  if (sourcemap) {
     processOptions.map = { inline };
   }
 
