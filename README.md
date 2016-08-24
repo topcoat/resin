@@ -1,20 +1,17 @@
-Resin
-=====
+# Resin
 
-[![Build Status](https://travis-ci.org/kristoferjoseph/resin.svg?branch=master)](https://travis-ci.org/kristoferjoseph/resin)
+[![Build Status](https://travis-ci.org/kristoferjoseph/resin.svg?branch=master)](https://travis-ci.org/kristoferjoseph/resin) [![Code Climate](https://codeclimate.com/github/kristoferjoseph/resin/badges/gpa.svg)](https://codeclimate.com/github/kristoferjoseph/resin) [![Test Coverage](https://codeclimate.com/github/kristoferjoseph/resin/badges/coverage.svg)](https://codeclimate.com/github/kristoferjoseph/resin/coverage) [![Issue Count](https://codeclimate.com/github/kristoferjoseph/resin/badges/issue_count.svg)](https://codeclimate.com/github/kristoferjoseph/resin)
 
 A CSS preprocessor.
 
-Installation
-------------
+## Installation
 
-```
+```sh
 npm install resin
 
 ```
 
-Usage
------
+## Usage
 
 ```js
 
@@ -36,14 +33,14 @@ var resin = require('resin');
         // Generate sourecemaps for debugging
         debug: true
     });
-
 ```
+
 This function will return an evaluated string that you can write to a file, or
 stream etc.
 
 Example writing to a file:
 
- ```js
+```js
 var resin = require('resin'),
     write = require('fs').writeFileSync,
     output;
@@ -58,21 +55,19 @@ var resin = require('resin'),
     });
 
     write('path/to/output/dir/filename.css', output);
-
 ```
 
-Entry CSS file
---------------
+## Entry CSS file
 
 ```css
 @import "node-package-name";
 @import "other-node-package-name";
 ```
+
 Resin will pull in CSS source files distributed via npm packages and add them
 to the AST. Uses [rework-npm](https://github.com/conradz/rework-npm) under the covers.
 
-Features
---------
+## Features
 
 Resin supports:
 
