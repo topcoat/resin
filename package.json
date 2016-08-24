@@ -2,32 +2,78 @@
   "name": "resin",
   "version": "0.3.0",
   "description": "resin CSS preprocessor",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "bin": {
+    "rsn": "./bin/index.js"
+  },
   "scripts": {
-    "test": "mocha test/*.js"
+    "compile": "babel -d ./ src/",
+    "prepublish": "npm run compile",
+    "test": "ava",
+    "coverage": "nyc npm test",
+    "codeclimate": "npm run coverage && nyc report --reporter=text-lcov | codeclimate-test-reporter",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/kristoferjoseph/resin.git"
   },
   "author": "Kristofer Joseph @dam",
-  "license": "Apache2",
+  "contributors": [
+    "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)"
+  ],
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/kristoferjoseph/resin/issues"
   },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  },
+  "nyc": {
+    "include": [
+      "src/lib/*.js",
+      "bin/index.js"
+    ],
+    "require": [
+      "babel-register"
+    ]
+  },
   "devDependencies": {
-    "mocha": "1.17.1",
-    "autoprefixer": "0.8.20131213",
-    "topcoat-button-base": "0.7.0"
+    "app-root-path": "^1.3.0",
+    "ava": "^0.16.0",
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-istanbul": "^2.0.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-register": "^6.11.6",
+    "codeclimate-test-reporter": "^0.3.3",
+    "eslint": "^3.2.2",
+    "eslint-config-airbnb": "^10.0.0",
+    "eslint-plugin-import": "^1.12.0",
+    "eslint-plugin-jsx-a11y": "^2.1.0",
+    "eslint-plugin-react": "^6.0.0",
+    "nixt": "^0.5.0",
+    "nyc": "^8.1.0",
+    "tap-difflet": "^0.6.0",
+    "topcoat-button-base": "^0.10.2"
   },
   "dependencies": {
-    "autoprefixer": "0.8",
-    "fs-extra": "0.8.1",
-    "rework-npm": "0.3.0",
-    "rework-vars": "2.0.2",
-    "rework-namespace": "0.1.2",
-    "rework": "0.20.2",
-    "rework-inherit": "0.2.1",
-    "rework-deduplicate": "0.1.0"
+    "autoprefixer": "^6.4.0",
+    "commander": "^2.9.0",
+    "fs-extra": "^0.30.0",
+    "perfectionist": "^2.1.4",
+    "pkginfo": "^0.4.0",
+    "postcss": "^5.1.2",
+    "postcss-add-namespace": "^1.0.3",
+    "postcss-css-variables": "^0.5.1",
+    "postcss-deduplicate": "^1.0.1",
+    "postcss-import": "^7.1.3",
+    "postcss-inherit": "^3.0.0",
+    "postcss-inherit-parser": "^0.1.4",
+    "postcss-url": "^5.1.2"
   }
 }
