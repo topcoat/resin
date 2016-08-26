@@ -64,13 +64,13 @@ resin({
 ```
 
 Resin will pull in CSS source files distributed via npm packages and add them
-to the AST. Uses [postcss-import](https://github.com/postcss/postcss-import) under the covers.
+to the AST. Uses [postcss-import](https://github.com/garthdb/postcss-npm) under the covers.
 
 ## Features
 
 Resin supports:
 
-* [Imports](https://github.com/postcss/postcss-import)
+* [Imports](https://github.com/garthdb/postcss-npm)
 * [Variables](https://github.com/MadLittleMods/postcss-css-variables)
 * [Extend](https://github.com/garthdb/postcss-inherit)
 * [Namespacing](https://github.com/garthdb/postcss-add-namespace)
