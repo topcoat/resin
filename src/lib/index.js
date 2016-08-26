@@ -1,5 +1,5 @@
 import postcss from 'postcss';
-import atImport from 'postcss-import';
+import atImport from 'postcss-npm';
 import dedupe from 'postcss-deduplicate';
 import vars from 'postcss-css-variables';
 import inherit from 'postcss-inherit';

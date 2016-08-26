@@ -3,6 +3,7 @@ import test from 'ava';
 import fs from 'fs';
 import appRoot from 'app-root-path';
 import resin from '../src/lib/index.js';
+import { SourceMapConsumer } from 'source-map';
 
 const read = fs.readFileSync;
 
@@ -64,5 +65,29 @@ test('should import local files.', t => {
   }).then(result => {
     const actual = result.css.trim();
     t.is(actual, expected);
+  });
+});
+
+test('should generate sourcemap.', t => {
+  const output = appRoot.path;
+  return resin({
+    src: `${output}/test/fixtures/resin.test.css`,
+    output: `${output}/test/expected/tmp/index.css`,
+    namespace: 'topcoat',
+    vars: true,
+    extend: true,
+    url: 'img/',
+    sourcemap: true,
+    sourcemapInline: false,
+  }).then(result => {
+    const map = new SourceMapConsumer(result.map.toString());
+    const pos = map.originalPositionFor({ line: 41, column: 2 });
+    const expected = {
+      source: '../../../node_modules/topcoat-utils/src/index.css',
+      line: 68,
+      column: 2,
+      name: null,
+    };
+    t.deepEqual(pos, expected);
   });
 });

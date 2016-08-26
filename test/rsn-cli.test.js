@@ -9,7 +9,9 @@ pkginfo(module, 'version');
 const read = fs.readFileSync;
 
 test.before(() => {
-  fs.mkdirSync('./expected/tmp/');
+  try {
+    fs.mkdirSync('./expected/tmp/');
+  } catch(e){}
 });
 
 test.after.always('cleanup', () => {
