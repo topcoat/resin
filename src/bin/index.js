@@ -7,6 +7,11 @@ import resin from '../lib/index.js';
 
 pkginfo(module, 'version', 'description');
 
+function list(val) {
+  const result = val.replace(/(^(?:"|')?\[)|(](?:"|')?$)/g, '').split(',');
+  return result.map((item) => item.trim().replace(/(^(?:"|')?)|((?:"|')?$)/g, ''));
+}
+
 program
   .version(module.exports.version)
   .description(module.exports.description)
@@ -23,6 +28,8 @@ program
     'Output external sourcemap, must include --debug flag.')
   .option('-o, --output-path [filename]',
     'Where to write out, defaults to stdout if not specified.')
+  .option('-p, --prepend <imports>',
+    'Imports to prepend to the beginning of the css file before processing', list)
   .parse(process.argv);
 
 const resinOptions = {};
@@ -52,6 +59,10 @@ if (program.browsers) {
 }
 if (program.outputPath) {
   resinOptions.output = program.outputPath;
+}
+
+if (program.prepend) {
+  resinOptions.prepend = program.prepend;
 }
 
 resinOptions.src = program.args[0];

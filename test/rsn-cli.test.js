@@ -11,7 +11,9 @@ const read = fs.readFileSync;
 test.before(() => {
   try {
     fs.mkdirSync('./expected/tmp/');
-  } catch(e){}
+  } catch (e) {
+    //
+  }
 });
 
 test.after.always('cleanup', () => {
@@ -51,8 +53,7 @@ test.cb('should generate correct output', t => {
 test.cb('should generate css with inline sourcemap', t => {
   nixt()
   .expect((result) => {
-    const expected = read('./expected/resin.debug.expected.css', 'utf-8').toString().trim();
-    t.is(result.stdout.trim(), expected);
+    t.regex(result.stdout.trim(), new RegExp('/*# sourceMappingURL=data:application/json;'));
   })
   .run('rsn --namespace \'topcoat\' -u \'img/\' -d ./fixtures/resin.test.css')
   .end(t.end);
@@ -78,5 +79,15 @@ test.cb('should import local file', t => {
     t.is(result.stdout.trim(), expected);
   })
   .run('rsn --namespace \'topcoat\' -u \'img/\' ./fixtures/import.test.css')
+  .end(t.end);
+});
+
+test.cb('should prepend an import file', t => {
+  nixt()
+  .expect((result) => {
+    const expected = read('./expected/import.expected.css', 'utf-8').toString().trim();
+    t.is(result.stdout.trim(), expected);
+  })
+  .run('rsn --namespace \'topcoat\' -u \'img/\' --prepend [\'./fixtures/resin.test.css\'] ./fixtures/import.test.css')
   .end(t.end);
 });

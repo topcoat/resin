@@ -1,4 +1,4 @@
-@import "topcoat-button-base";
+@import "./topcoat-button-base.css";
 
 :root {
   --blue: #0cc;
@@ -7,7 +7,7 @@
   --height--large: 3rem;
 }
 .button--large {
-  extend: %button;
+  @extend: %button;
   padding: 0 0.75rem;
   width: 6rem;
   height: 3rem;
@@ -18,13 +18,13 @@
   content:'';
 }
 
-@import "topcoat-button-base";
+@import "./topcoat-button-base.css";
 
 :root {
   --green: #0c0;
 }
 .button--quiet {
-  extend: %button;
+  @extend: %button;
   background: var(--green);
   border: none;
 }

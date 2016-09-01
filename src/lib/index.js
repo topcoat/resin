@@ -3,7 +3,6 @@ import atImport from 'postcss-npm';
 import dedupe from 'postcss-deduplicate';
 import vars from 'postcss-css-variables';
 import inherit from 'postcss-inherit';
-import inheritParser from 'postcss-inherit-parser';
 import namespace from 'postcss-add-namespace';
 import autoprefixer from 'autoprefixer';
 import url from 'postcss-url';
@@ -12,6 +11,12 @@ import path from 'path';
 import perfectionist from 'perfectionist';
 
 const read = fs.readFileSync;
+
+const converToArray = (thing) => {
+  if (!thing) return thing;
+  if (Array.isArray(thing)) return thing;
+  return [thing];
+};
 
 export default function resin(options = {}) {
   const src = options.src || false;
@@ -23,13 +28,20 @@ export default function resin(options = {}) {
   const useVars = options.vars || false;
   const useExtend = options.extend || false;
   const sourcemap = options.sourcemap || false;
+  const prepend = converToArray(options.prepend) || false;
+  const additionalPlugins = options.plugins || false;
   let inline = true;
 
   if ({}.hasOwnProperty.call(options, 'sourcemapInline')) {
     inline = options.sourcemapInline;
   }
 
-  const plugins = [atImport({ skipDuplicates: false })];
+  const importOptions = {};
+  if (prepend) {
+    importOptions.prepend = prepend;
+  }
+
+  const plugins = [atImport(importOptions)];
 
   if (useVars) {
     plugins.push(vars());
@@ -54,7 +66,10 @@ export default function resin(options = {}) {
     cascade: false,
   }));
 
-  const processOptions = { parser: inheritParser };
+  if (additionalPlugins) {
+    plugins.push(...converToArray(additionalPlugins));
+  }
+  const processOptions = {};
   if (src) {
     processOptions.from = path.resolve(src);
   }
