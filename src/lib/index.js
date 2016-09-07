@@ -1,16 +1,16 @@
 import postcss from 'postcss';
 import atImport from 'postcss-npm';
 import dedupe from 'postcss-deduplicate';
-import vars from 'postcss-css-variables';
+import vars from 'postcss-custom-properties';
 import inherit from 'postcss-inherit';
 import namespace from 'postcss-add-namespace';
 import autoprefixer from 'autoprefixer';
 import url from 'postcss-url';
-import fs from 'fs-extra';
+// import fs from 'fs-extra';
 import path from 'path';
 import perfectionist from 'perfectionist';
 
-const read = fs.readFileSync;
+// const read = fs.readFileSync;
 
 const converToArray = (thing) => {
   if (!thing) return thing;
@@ -19,10 +19,11 @@ const converToArray = (thing) => {
 };
 
 export default function resin(options = {}) {
+  const inputCSS = options.css;
   const src = options.src || false;
-  const inputCSS = options.rawcss || read(src, 'utf8');
   const output = options.output || false;
   const ns = options.namespace || '';
+  const autopre = (options.autoprefixer === undefined) ? true : options.autoprefixer;
   const browsers = options.browsers || 'last 2 version';
   const urlPrefix = options.url || '';
   const useVars = options.vars || false;
@@ -58,14 +59,15 @@ export default function resin(options = {}) {
       `${urlPrefix}${urlString}`,
     }));
   }
-  plugins.push(autoprefixer({ browsers }));
+  if (autopre) {
+    plugins.push(autoprefixer({ browsers }));
+  }
   plugins.push(perfectionist({
     indentSize: 2,
     maxAtRuleLength: false,
     maxSelectorLength: 1,
     cascade: false,
   }));
-
   if (additionalPlugins) {
     plugins.push(...converToArray(additionalPlugins));
   }

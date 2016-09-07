@@ -1,5 +1,5 @@
 @import "./resin.test.css";
 
 .content {
-  cursor: pointer;
+  color: var(--blue);
 }

@@ -88,6 +88,15 @@ test.cb('should prepend an import file', t => {
     const expected = read('./expected/import.expected.css', 'utf-8').toString().trim();
     t.is(result.stdout.trim(), expected);
   })
-  .run('rsn --namespace \'topcoat\' -u \'img/\' --prepend [\'./fixtures/resin.test.css\'] ./fixtures/import.test.css')
+  .run('rsn --namespace \'topcoat\' -u \'img/\' --prepend [\'./fixtures/resin.test.css\'] ./fixtures/prepend.test.css')
+  .end(t.end);
+});
+
+test.cb('should report error when variable not found (and no default is set)', t => {
+  nixt()
+  .expect((result) => {
+    t.regex(result.stdout.trim(), /^Error: Cannot find module/);
+  })
+  .run('rsn --prepend [\'./does-not-exist.css\'] ./fixtures/prepend.test.css')
   .end(t.end);
 });
