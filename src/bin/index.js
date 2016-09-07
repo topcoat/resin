@@ -21,6 +21,7 @@ program
   .option('-n, --namespace <namespace>', 'Namespace to use as a prefix for classes.', '')
   .option('-u, --urlprefix <prefix>', 'String to prepend to urls.', '')
   .option('-b, --browsers <browsers>', 'Browser string to pass to autoprefixer.', 'last 2 version')
+  .option('-a, --no-autoprefixer', 'Passing this flag will disable autoprefixer.')
   .option('-d, --debug',
     `Enable sourcemaps, by default will add sourcemaps inline.
     It can also be set to "external" using --sourcemap-type.`)
@@ -57,6 +58,7 @@ if (program.urlprefix) {
 if (program.browsers) {
   resinOptions.browsers = program.browsers;
 }
+resinOptions.autoprefixer = program.autoprefixer;
 if (program.outputPath) {
   resinOptions.output = program.outputPath;
 }
@@ -66,6 +68,7 @@ if (program.prepend) {
 }
 
 resinOptions.src = program.args[0];
+resinOptions.css = fs.readFileSync(resinOptions.src, 'utf-8');
 
 resin(resinOptions).then((results) => {
   if (program.outputPath) {
@@ -78,4 +81,4 @@ resin(resinOptions).then((results) => {
   } else {
     console.log(results.css);
   }
-});
+}).catch(console.log);

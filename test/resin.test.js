@@ -10,8 +10,10 @@ const read = fs.readFileSync;
 
 test('should generate correct output', t => {
   const expected = read('./expected/resin.expected.css', 'utf-8').toString().trim();
+  const sourcePath = './fixtures/resin.test.css';
   return resin({
-    src: './fixtures/resin.test.css',
+    css: read(sourcePath, 'utf-8'),
+    src: sourcePath,
     namespace: 'topcoat',
     vars: true,
     extend: true,
@@ -22,9 +24,11 @@ test('should generate correct output', t => {
   });
 });
 
-test('should not fail when passed a debug flag', t =>
-  resin({
-    src: './fixtures/resin.test.css',
+test('should not fail when passed a debug flag', t => {
+  const sourcePath = './fixtures/resin.test.css';
+  return resin({
+    css: read(sourcePath, 'utf-8'),
+    src: sourcePath,
     namespace: 'topcoat',
     vars: true,
     extend: true,
@@ -34,14 +38,16 @@ test('should not fail when passed a debug flag', t =>
   }).then(result => {
     const actual = result.map;
     t.truthy(actual);
-  })
-);
+  });
+});
 
 test('should write to output file and use external sourcemap.', t => {
   const expected = read('./expected/resin.expected.css.map', 'utf-8').toString().trim();
   const output = appRoot.path;
+  const sourcePath = `${output}/test/fixtures/resin.test.css`;
   return resin({
-    src: `${output}/test/fixtures/resin.test.css`,
+    css: read(sourcePath, 'utf-8'),
+    src: sourcePath,
     output: `${output}/test/expected/tmp/index.css`,
     namespace: 'topcoat',
     vars: true,
@@ -57,8 +63,10 @@ test('should write to output file and use external sourcemap.', t => {
 
 test('should import local files.', t => {
   const expected = read('./expected/import.expected.css', 'utf-8').toString().trim();
+  const sourcePath = './fixtures/import.test.css';
   return resin({
-    src: './fixtures/import.test.css',
+    css: read(sourcePath, 'utf-8'),
+    src: sourcePath,
     namespace: 'topcoat',
     vars: true,
     extend: true,
@@ -71,8 +79,10 @@ test('should import local files.', t => {
 
 test('should generate sourcemap.', t => {
   const output = appRoot.path;
+  const sourcePath = `${output}/test/fixtures/resin.test.css`;
   return resin({
-    src: `${output}/test/fixtures/resin.test.css`,
+    css: read(sourcePath, 'utf-8'),
+    src: sourcePath,
     output: `${output}/test/expected/tmp/index.css`,
     namespace: 'topcoat',
     vars: true,
@@ -95,8 +105,10 @@ test('should generate sourcemap.', t => {
 
 test('should prepend imports', t => {
   const expected = read('./expected/import.expected.css', 'utf-8').toString().trim();
+  const sourcePath = './fixtures/prepend.test.css';
   return resin({
-    src: './fixtures/prepend.test.css',
+    css: read(sourcePath, 'utf-8'),
+    src: sourcePath,
     namespace: 'topcoat',
     vars: true,
     extend: true,
@@ -110,8 +122,10 @@ test('should prepend imports', t => {
 
 test('should add additional plugins', t => {
   const expected = read('./expected/import.expected.min.css', 'utf-8').toString().trim();
+  const sourcePath = './fixtures/prepend.test.css';
   return resin({
-    src: './fixtures/prepend.test.css',
+    css: read(sourcePath, 'utf-8'),
+    src: sourcePath,
     namespace: 'topcoat',
     vars: true,
     extend: true,

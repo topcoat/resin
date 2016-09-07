@@ -47,7 +47,7 @@
 }
 
 .topcoat-button--large {
-  padding: 0 0.75rem;
+  padding: 0 .75rem;
   width: 6rem;
   height: 3rem;
   background: url("img/bg-image.jpg");
@@ -65,5 +65,5 @@
 }
 
 .topcoat-content {
-  cursor: pointer;
+  color: #0cc;
 }
