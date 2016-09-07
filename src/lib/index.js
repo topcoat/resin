@@ -45,7 +45,7 @@ export default function resin(options = {}) {
   const plugins = [atImport(importOptions)];
 
   if (useVars) {
-    plugins.push(vars());
+    plugins.push(vars({ strict: false }));
   }
   plugins.push(dedupe());
   if (useExtend) {

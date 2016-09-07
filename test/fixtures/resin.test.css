@@ -25,6 +25,6 @@
 }
 .button--quiet {
   @extend: %button;
-  background: var(--green);
+  background: var(--green, green);
   border: none;
 }
