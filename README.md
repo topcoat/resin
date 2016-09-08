@@ -1,6 +1,6 @@
 # Resin
 
-[![Build Status](https://travis-ci.org/topcoat/resin.svg?branch=master)](https://travis-ci.org/topcoat/resin) [![Code Climate](https://codeclimate.com/github/topcoat/resin/badges/gpa.svg)](https://codeclimate.com/github/topcoat/resin) [![Test Coverage](https://codeclimate.com/github/topcoat/resin/badges/coverage.svg)](https://codeclimate.com/github/topcoat/resin/coverage) [![Issue Count](https://codeclimate.com/github/topcoat/resin/badges/issue_count.svg)](https://codeclimate.com/github/topcoat/resin/issues) [![npm version](https://badge.fury.io/js/resin.svg)](https://badge.fury.io/js/resin)
+[![Build Status](https://travis-ci.org/topcoat/resin.svg?branch=master)](https://travis-ci.org/topcoat/resin) [![Code Climate](https://codeclimate.com/github/topcoat/resin/badges/gpa.svg)](https://codeclimate.com/github/topcoat/resin) [![Issue Count](https://codeclimate.com/github/topcoat/resin/badges/issue_count.svg)](https://codeclimate.com/github/topcoat/resin/issues) [![codecov](https://codecov.io/gh/topcoat/resin/branch/master/graph/badge.svg)](https://codecov.io/gh/topcoat/resin) [![npm version](https://badge.fury.io/js/resin.svg)](https://badge.fury.io/js/resin)
 
 A CSS preprocessor.
 
