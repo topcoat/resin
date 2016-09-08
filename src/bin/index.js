@@ -13,7 +13,6 @@ function list(val) {
 }
 
 program
-  .version(module.exports.version)
   .description(module.exports.description)
   .usage('[options] <file>')
   .option('-v, --no-vars', 'Passing this flag will skip using the postcss-css-variables plugin.')
