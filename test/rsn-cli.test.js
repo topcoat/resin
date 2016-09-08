@@ -31,15 +31,6 @@ test.cb('should display help', t => {
   .end(t.end);
 });
 
-test.cb('should display version', t => {
-  nixt()
-  .expect((result) => {
-    t.is(result.stdout.trim(), module.exports.version);
-  })
-  .run('rsn -V')
-  .end(t.end);
-});
-
 test.cb('should generate correct output', t => {
   nixt()
   .expect((result) => {
@@ -88,7 +79,8 @@ test.cb('should prepend an import file', t => {
     const expected = read('./expected/import.expected.css', 'utf-8').toString().trim();
     t.is(result.stdout.trim(), expected);
   })
-  .run('rsn --namespace \'topcoat\' -u \'img/\' --prepend [\'./fixtures/resin.test.css\'] ./fixtures/prepend.test.css')
+  .run(`rsn --namespace 'topcoat' -u 'img/'
+  --prepend ['./fixtures/resin.test.css'] ./fixtures/prepend.test.css`)
   .end(t.end);
 });
 

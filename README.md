@@ -1,6 +1,6 @@
 # Resin
 
-[![Build Status](https://travis-ci.org/kristoferjoseph/resin.svg?branch=master)](https://travis-ci.org/kristoferjoseph/resin) [![Code Climate](https://codeclimate.com/github/kristoferjoseph/resin/badges/gpa.svg)](https://codeclimate.com/github/kristoferjoseph/resin) [![Test Coverage](https://codeclimate.com/github/kristoferjoseph/resin/badges/coverage.svg)](https://codeclimate.com/github/kristoferjoseph/resin/coverage) [![Issue Count](https://codeclimate.com/github/kristoferjoseph/resin/badges/issue_count.svg)](https://codeclimate.com/github/kristoferjoseph/resin/issues) [![npm version](https://badge.fury.io/js/resin.svg)](https://badge.fury.io/js/resin)
+[![Build Status](https://travis-ci.org/topcoat/resin.svg?branch=master)](https://travis-ci.org/topcoat/resin) [![Code Climate](https://codeclimate.com/github/topcoat/resin/badges/gpa.svg)](https://codeclimate.com/github/topcoat/resin) [![Test Coverage](https://codeclimate.com/github/topcoat/resin/badges/coverage.svg)](https://codeclimate.com/github/topcoat/resin/coverage) [![Issue Count](https://codeclimate.com/github/topcoat/resin/badges/issue_count.svg)](https://codeclimate.com/github/topcoat/resin/issues) [![npm version](https://badge.fury.io/js/resin.svg)](https://badge.fury.io/js/resin)
 
 A CSS preprocessor.
 
