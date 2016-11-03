@@ -74,7 +74,7 @@
     "postcss-add-namespace": "^1.0.3",
     "postcss-custom-properties": "^5.0.1",
     "postcss-deduplicate": "^1.0.1",
-    "postcss-inherit": "^4.0.0",
+    "postcss-inherit": "^4.0.2",
     "postcss-npm": "^1.1.0",
     "postcss-url": "^5.1.2"
   },
