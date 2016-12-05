@@ -57,7 +57,7 @@
     "eslint-config-airbnb": "^11.0.0",
     "eslint-plugin-import": "^1.12.0",
     "eslint-plugin-jsx-a11y": "^2.1.0",
-    "eslint-plugin-react": "^6.0.0",
+    "eslint-plugin-react": "^6.8.0",
     "nixt": "^0.5.0",
     "nyc": "^8.1.0",
     "postcss-csso": "^1.1.2",
