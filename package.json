@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "app-root-path": "^2.0.1",
-    "ava": "^0.16.0",
+    "ava": "^0.18.2",
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.1",
     "babel-plugin-add-module-exports": "^0.2.1",
