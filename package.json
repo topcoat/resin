@@ -49,7 +49,7 @@
     "babel-core": "^6.9.1",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-istanbul": "^2.0.0",
-    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015": "^6.24.0",
     "babel-register": "^6.11.6",
     "codecov": "^1.0.1",
     "cz-customizable": "^4.0.0",
