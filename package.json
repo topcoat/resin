@@ -76,7 +76,7 @@
     "postcss-deduplicate": "^1.0.1",
     "postcss-inherit": "^4.0.0",
     "postcss-npm": "^1.1.0",
-    "postcss-url": "^5.1.2"
+    "postcss-url": "^6.0.2"
   },
   "config": {
     "commitizen": {
