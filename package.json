@@ -61,7 +61,7 @@
     "nixt": "^0.5.0",
     "nyc": "^8.1.0",
     "postcss-csso": "^1.1.2",
-    "semantic-release": "^4.3.5",
+    "semantic-release": "^6.3.6",
     "source-map": "^0.5.6",
     "topcoat-button-base": "^1.0.1"
   },
