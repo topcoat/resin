@@ -70,7 +70,7 @@
     "commander": "^2.9.0",
     "perfectionist": "^2.1.4",
     "pkginfo": "^0.4.0",
-    "postcss": "^5.1.2",
+    "postcss": "^6.0.0",
     "postcss-add-namespace": "^1.0.3",
     "postcss-custom-properties": "^5.0.1",
     "postcss-deduplicate": "^1.0.1",
