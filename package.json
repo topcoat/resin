@@ -72,7 +72,7 @@
     "pkginfo": "^0.4.0",
     "postcss": "^5.1.2",
     "postcss-add-namespace": "^1.0.3",
-    "postcss-custom-properties": "^5.0.1",
+    "postcss-custom-properties": "^6.0.0",
     "postcss-deduplicate": "^1.0.1",
     "postcss-inherit": "^4.0.0",
     "postcss-npm": "^1.1.0",
