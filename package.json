@@ -54,7 +54,7 @@
     "codecov": "^1.0.1",
     "cz-customizable": "^4.0.0",
     "eslint": "^3.2.2",
-    "eslint-config-airbnb": "^11.0.0",
+    "eslint-config-airbnb": "^15.0.0",
     "eslint-plugin-import": "^1.12.0",
     "eslint-plugin-jsx-a11y": "^2.1.0",
     "eslint-plugin-react": "^6.0.0",
